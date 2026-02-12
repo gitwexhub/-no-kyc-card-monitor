@@ -37,7 +37,10 @@ jobs:
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
-        run: python src/main.py
+        run: |
+          cp .github/workflows/src/main.py src/main.py || true
+          cp .github/workflows/src/search_sources.py src/search_sources.py || true
+          python src/main.py
 
       - name: Commit results
         run: |
