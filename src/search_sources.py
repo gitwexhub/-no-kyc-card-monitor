@@ -1,7 +1,7 @@
 """
 Search Sources Module - SerpAPI Version
 ========================================
-Searches Google via SerpAPI for Visa cards marketed as "no KYC".
+Focused on finding actual companies selling no-KYC Visa cards.
 """
 
 import os
@@ -14,16 +14,34 @@ from typing import List, Dict
 logger = logging.getLogger(__name__)
 
 SEARCH_QUERIES = [
-    'Visa card "no KYC"',
-    'Visa prepaid card "no KYC"',
-    'Visa debit card "no KYC"',
-    '"no KYC" Visa virtual card',
-    'Visa card "without KYC"',
-    'anonymous Visa prepaid card',
-    '"kyc free" Visa card',
-    'crypto Visa card "no KYC"',
-    'site:reddit.com Visa "no KYC" card',
-    'site:linkedin.com "no KYC" Visa card',
+    # Find actual product pages
+    '"no KYC" Visa card sign up',
+    '"no KYC" Visa debit card order',
+    '"no KYC" Visa prepaid card buy',
+    '"no KYC" virtual Visa card',
+    '"KYC free" Visa card',
+    '"without KYC" Visa card',
+    '"no verification" Visa card crypto',
+    'anonymous Visa debit card buy',
+    'no identity verification Visa card',
+
+    # Crypto-specific (most no-KYC cards are crypto-funded)
+    'crypto debit card no KYC Visa',
+    'bitcoin Visa card no KYC',
+    'USDT Visa card no verification',
+    'stablecoin Visa card anonymous',
+    'crypto to Visa card no ID',
+
+    # App store searches
+    'site:apps.apple.com no KYC Visa card',
+    'site:play.google.com no KYC Visa card',
+
+    # Find company websites directly
+    '"issued by" "no KYC" Visa card',
+    '"terms and conditions" "no KYC" Visa card',
+    '"get your card" "no KYC" Visa',
+    '"order card" "no KYC" Visa',
+    '"sign up" "no verification" Visa card',
 ]
 
 
@@ -50,7 +68,7 @@ def search_all_sources() -> List[Dict]:
     seen = set()
     unique = []
     for r in results:
-        url = r.get("source_url", "")
+        url = normalize_url(r.get("source_url", ""))
         if url and url not in seen:
             seen.add(url)
             unique.append(r)
@@ -86,6 +104,10 @@ def serpapi_search(query: str, api_key: str) -> List[Dict]:
         if not is_relevant(combined_text):
             continue
 
+        # Skip pure discussion/article sites - we want company sites
+        if is_discussion_only(link, combined_text):
+            continue
+
         company_website = extract_company_website(link, snippet, source_platform)
 
         results.append({
@@ -94,11 +116,17 @@ def serpapi_search(query: str, api_key: str) -> List[Dict]:
             "card_name": extract_card_name(title, snippet),
             "card_type": detect_card_type(combined_text),
             "company_name": extract_company_from_snippet(title, snippet),
-            "company_website": company_website,
+            "company_website": company_website if company_website else link,
             "notes": snippet[:500],
         })
 
     return results
+
+
+def normalize_url(url: str) -> str:
+    url = url.rstrip("/")
+    url = re.sub(r'^https?://(www\.)?', '', url)
+    return url.lower()
 
 
 def detect_platform(url: str, display_link: str) -> str:
@@ -137,12 +165,26 @@ def is_relevant(text: str) -> bool:
         "no kyc", "no-kyc", "nokyc", "no know your customer",
         "without kyc", "kyc-free", "kyc free", "no verification",
         "no id required", "anonymous card", "no identity",
-        "no id", "anonymous",
+        "anonymous", "no id verification",
     ])
     has_card = any(word in text_lower for word in [
         "card", "prepaid", "debit", "credit", "virtual card",
     ])
     return has_visa and (has_no_kyc or has_card)
+
+
+def is_discussion_only(url: str, text: str) -> bool:
+    """Filter out pure news/discussion that aren't actual card providers."""
+    url_lower = url.lower()
+    skip_domains = [
+        "wikipedia.org", "investopedia.com", "nerdwallet.com",
+        "forbes.com", "cointelegraph.com", "coindesk.com",
+        "techcrunch.com", "theverge.com",
+    ]
+    for domain in skip_domains:
+        if domain in url_lower:
+            return True
+    return False
 
 
 def detect_card_type(text: str) -> str:
@@ -166,44 +208,4 @@ def extract_card_name(title: str, body: str) -> str:
         r'(?:Visa|card|Card)\s+(?:by|from)\s+([A-Z][A-Za-z0-9]+(?:\s+[A-Z][A-Za-z0-9]+)*)',
         r'([A-Z][A-Za-z0-9]{2,})\s+(?:prepaid|debit|credit|virtual)',
     ]
-    for pattern in patterns:
-        match = re.search(pattern, combined)
-        if match:
-            name = match.group(1).strip()
-            if name.lower() not in (
-                "the", "a", "an", "this", "my", "your", "no", "new",
-                "best", "top", "get", "buy", "free", "any",
-            ):
-                return name
-    clean_title = re.sub(r'\s*[-|:\u2013\u2014].*$', '', title).strip()
-    return clean_title[:100] if clean_title else "Unknown"
-
-
-def extract_company_from_snippet(title: str, snippet: str) -> str:
-    combined = f"{title} {snippet}"
-    patterns = [
-        r'(?:by|from|offered by|powered by|issued by)\s+([A-Z][A-Za-z0-9]+(?:\s+[A-Z][A-Za-z0-9]+)*)',
-    ]
-    for pattern in patterns:
-        match = re.search(pattern, combined)
-        if match:
-            return match.group(1).strip()
-    return ""
-
-
-def extract_company_website(source_url: str, snippet: str, platform: str) -> str:
-    if platform.startswith(("Reddit", "X/Twitter", "Medium", "BitcoinTalk", "LinkedIn")):
-        url_pattern = r'https?://[^\s<>"\'\]).,]+'
-        urls = re.findall(url_pattern, snippet)
-        for url in urls:
-            if not any(s in url.lower() for s in [
-                "reddit.com", "twitter.com", "x.com", "medium.com",
-                "linkedin.com", "bitcointalk.org", "t.co",
-            ]):
-                return url
-        return ""
-    if platform.startswith("Web"):
-        from urllib.parse import urlparse
-        parsed = urlparse(source_url)
-        return f"{parsed.scheme}://{parsed.netloc}"
-    return source_url
+    for patter
