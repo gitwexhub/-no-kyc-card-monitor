@@ -17,14 +17,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Debug - show file structure
-        run: |
-          echo "Current directory:"
-          pwd
-          echo ""
-          echo "All files:"
-          find . -type f | head -50
-
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
@@ -34,11 +26,10 @@ jobs:
         run: pip install requests
 
       - name: Run daily scan
-       env:
+        env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          python src/main.py
+        run: python src/main.py
 
       - name: Commit results
         run: |
