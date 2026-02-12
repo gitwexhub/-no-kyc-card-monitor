@@ -37,8 +37,6 @@ jobs:
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
         run: |
-          cp .github/workflows/src/main.py src/main.py || true
-          cp .github/workflows/src/search_sources.py src/search_sources.py || true
           python src/main.py
 
       - name: Commit results
