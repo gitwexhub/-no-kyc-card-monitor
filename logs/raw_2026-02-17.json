@@ -1,0 +1,84 @@
+[
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/bo/app/cheapest-visa-cards-bitsika/id1478570397",
+    "card_name": "Cheapest Visa",
+    "card_type": "Credit/Virtual",
+    "company_name": "",
+    "company_website": "https://apps.apple.com",
+    "notes": "It's perfect for users who want a no-KYC virtual credit card experience; fast, private, and hassle-free. Spend globally without delays or paperwork. Made for ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-02-17"
+  },
+  {
+    "source_platform": "Web (https://www.cointracker.io \u203a blog \u203a can-i-buy-crypto-wit...)",
+    "source_url": "https://www.cointracker.io/blog/can-i-buy-crypto-with-a-credit-card",
+    "card_name": "Crypto on credit",
+    "card_type": "Credit",
+    "company_name": "",
+    "company_website": "https://www.cointracker.io",
+    "notes": "As to whether card issuers like American Express, Visa, and Mastercard allow crypto ... Can you buy crypto with a credit card with no verification ... | Could not fetch website",
+    "date_found": "2026-02-17"
+  },
+  {
+    "source_platform": "Web (https://www.cloaked.com \u203a post \u203a privacy-com-alternati...)",
+    "source_url": "https://www.cloaked.com/post/privacy-com-alternatives",
+    "card_name": "Cloaked Pay",
+    "card_type": "Virtual",
+    "company_name": "Cloaked, Inc.",
+    "company_website": "https://www.cloaked.com",
+    "notes": "Privacy.com Alternatives \u00b7 1. Cloaked \u00b7 2. Revolut \u00b7 3. Capital One Virtual Cards \u00b7 4. IronVest \u00b7 5. American Express Virtual Cards \u00b7 6. Wise Visa ...",
+    "app_store_link": "https://apps.apple.com/us/app/cloaked/id1600487147",
+    "play_store_link": "https://play.google.com/store/apps/details?id=app.android.cloaked&amp;hl=en&amp;gl=US",
+    "terms_conditions_url": "https://www.cloaked.com/terms-of-service",
+    "privacy_policy_url": "https://www.cloaked.com/features/all-features",
+    "ceo_or_founders": "Arjun Bhatnagar (Co-founder Chief Executive Officer); Abhijay Bhatnagar (Co-founder Chief Product Officer)",
+    "date_found": "2026-02-17"
+  },
+  {
+    "source_platform": "Web (https://www.visa.com.ng \u203a payment-technology \u203a visa-s...)",
+    "source_url": "https://www.visa.com.ng/run-your-business/small-business-tools/payment-technology/visa-secure.html",
+    "card_name": "Visa contactless chip card",
+    "card_type": "Debit and Credit",
+    "company_name": "Visa",
+    "company_website": "https://www.visa.com.ng",
+    "notes": "Visa Secure is Visa's global EMV 3-D Secure program that makes authentication simple, lowers friction for consumers and helps prevent card-not-present fraud.",
+    "date_found": "2026-02-17"
+  },
+  {
+    "source_platform": "Reddit r/defi",
+    "source_url": "https://www.reddit.com/r/defi/comments/1r0trf2/suggest_some_nonkyc_crypto_cards/",
+    "card_name": "Suggest some non",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://www.reddit.com/r/defi/comments/1r0trf2/suggest_some_nonkyc_crypto_cards/",
+    "notes": "Realistically fully non-KYC crypto cards are rare. Most legit Visa/Mastercard partners require at least some identity verification. That said, ... | Could not fetch website",
+    "date_found": "2026-02-17"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=com.oobit&hl=en_CA",
+    "card_name": "Oobit",
+    "card_type": "Unknown",
+    "company_name": "Google LLC",
+    "company_website": "https://play.google.com",
+    "notes": "Simply tap your phone at any Visa or Mastercard POS terminal and pay directly from your crypto wallet. This functionality brings unparalleled convenience, ...",
+    "play_store_link": "https://play.google.com/store/apps/details?id\\u003dcom.jxhy.official\\u0026rdid\\u003dcom.jxhy.official\\u0026feature\\u003dmd\\u0026offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "physical_address": "1600 Amphitheatre Parkway, Mountain View, California 94043, USA",
+    "date_found": "2026-02-17"
+  },
+  {
+    "source_platform": "Web (https://www.visa.es \u203a dam \u203a unitedkingdom \u203a PDF)",
+    "source_url": "https://www.visa.es/content/dam/VCOM/regional/ve/unitedkingdom/PDF/sca/Visa-PSD2-SCA-for-Remote-Electronic-Transactions-Implementation-Guide.pdf",
+    "card_name": "Visa",
+    "card_type": "Prepaid",
+    "company_name": "Visa",
+    "company_website": "https://www.visa.es",
+    "notes": "these can include non-reloadable prepaid cards on which no KYC has been done and thus ... \u2022 Terms and conditions specifying how the final amount ...",
+    "date_found": "2026-02-17"
+  }
+]
