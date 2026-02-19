@@ -9,6 +9,8 @@ import logging
 import requests
 from urllib.parse import urljoin, urlparse
 
+from search_sources import fetch_app_store_metadata, fetch_play_store_metadata
+
 logger = logging.getLogger(__name__)
 
 HEADERS = {
@@ -19,19 +21,84 @@ HEADERS = {
 
 def enrich_result(result):
     website = result.get("company_website", "")
+    platform = result.get("source_platform", "")
+    source_url = result.get("source_url", "")
+    app_metadata = None
+
+    # For App Store/Google Play results, fetch metadata for fallback info
+    if platform in ("App Store", "Google Play"):
+        logger.info("    Fetching app store metadata for %s", source_url)
+        if platform == "App Store":
+            app_metadata = fetch_app_store_metadata(source_url)
+        elif platform == "Google Play":
+            app_metadata = fetch_play_store_metadata(source_url)
+
+        if app_metadata:
+            # Use metadata for website if not already set
+            if app_metadata.get("developer_website") and (not website or not website.startswith("http")):
+                website = app_metadata["developer_website"]
+                result["company_website"] = website
+            # Store metadata for fallback use later
+            if app_metadata.get("developer_name"):
+                result["_fallback_company"] = app_metadata["developer_name"]
+            if app_metadata.get("app_name"):
+                result["_fallback_card"] = app_metadata["app_name"]
+
     if not website or not website.startswith("http"):
-        source_url = result.get("source_url", "")
-        if source_url and "reddit.com" not in source_url and "x.com" not in source_url:
+        # Don't use forum/social URLs as company website
+        skip_sources = ["reddit.com", "x.com", "twitter.com", "bitcointalk.org", "medium.com"]
+        if source_url and not any(skip in source_url.lower() for skip in skip_sources):
             website = source_url
         else:
+            # Use fallback data if available
+            if result.get("_fallback_company"):
+                result["company_name"] = result.pop("_fallback_company")
+            if result.get("_fallback_card"):
+                result["card_name"] = result.pop("_fallback_card")
             result["notes"] = result.get("notes", "") + " | No website found"
             return result
+
+    # Helper function to derive names from domain
+    def derive_names_from_url(url):
+        """Extract company name from domain, excluding common platform domains."""
+        skip_domains = ["apps.apple.com", "play.google.com", "reddit.com", "x.com",
+                        "twitter.com", "bitcointalk.org", "medium.com"]
+        parsed = urlparse(url)
+        domain = parsed.netloc.replace("www.", "").lower()
+        for skip in skip_domains:
+            if skip in domain:
+                return None
+        domain_parts = domain.split(".")
+        if domain_parts:
+            return domain_parts[0].title()
+        return None
     try:
         base_domain = get_base_url(website)
         logger.info("    Enriching from %s", base_domain)
         pages_text = {}
         main_html = fetch_page(base_domain)
         if not main_html:
+            # Website fetch failed - use fallback or derive from domain
+            if result.get("_fallback_company"):
+                result["company_name"] = result.pop("_fallback_company")
+            elif not result.get("company_name"):
+                derived = derive_names_from_url(base_domain)
+                if derived:
+                    result["company_name"] = derived
+
+            if result.get("_fallback_card"):
+                result["card_name"] = result.pop("_fallback_card")
+            elif not result.get("card_name"):
+                if result.get("company_name"):
+                    result["card_name"] = result["company_name"] + " Card"
+                else:
+                    # Derive from domain directly
+                    derived = derive_names_from_url(base_domain)
+                    if derived:
+                        result["card_name"] = derived + " Card"
+
+            result.pop("_fallback_company", None)
+            result.pop("_fallback_card", None)
             result["notes"] = result.get("notes", "") + " | Could not fetch website"
             return result
         pages_text["homepage"] = clean_html(main_html)
@@ -80,7 +147,35 @@ def enrich_result(result):
                 for key, val in claude_data.items():
                     if val and val.lower() not in ("unknown", "not found", "n/a", "none", ""):
                         result[key] = val
+
+        # Use fallback values if Claude didn't extract card_name or company_name
+        if not result.get("company_name") and result.get("_fallback_company"):
+            result["company_name"] = result["_fallback_company"]
+        if not result.get("card_name") and result.get("_fallback_card"):
+            result["card_name"] = result["_fallback_card"]
+
+        # Last resort: derive company name from domain (but not for platform domains)
+        if not result.get("company_name"):
+            derived = derive_names_from_url(base_domain)
+            if derived:
+                result["company_name"] = derived
+
+        # Last resort: derive card name from company name or domain
+        if not result.get("card_name"):
+            if result.get("company_name"):
+                result["card_name"] = result["company_name"] + " Card"
+            else:
+                # Derive from domain directly
+                derived = derive_names_from_url(base_domain)
+                if derived:
+                    result["card_name"] = derived + " Card"
+
         result["company_website"] = base_domain
+
+        # Clean up fallback fields
+        result.pop("_fallback_company", None)
+        result.pop("_fallback_card", None)
+
     except Exception as e:
         logger.error("    Enrichment error: %s", e)
         result["notes"] = result.get("notes", "") + " | Enrichment error: " + str(e)
@@ -96,20 +191,38 @@ def analyze_with_claude(pages_text, website):
     combined_text = combined_text[:60000]
     prompt = """Analyze the following website content from """ + website + """ and extract information about this company that offers a Visa card product.
 
+CRITICAL - You MUST extract these two fields accurately:
+1. "company_name": The official name of the company/startup/fintech that operates this website and offers the card product. Look for:
+   - Company name in header/logo area
+   - "About Us" section
+   - Footer copyright (e.g., "© 2024 CompanyName")
+   - Legal/Terms pages
+
+2. "card_name": The specific name of their Visa card product. Look for:
+   - Product branding (e.g., "Coinbase Card", "BitPay Card", "Revolut Card")
+   - Marketing headlines about the card
+   - If no specific product name, use format: "[CompanyName] Card"
+
+IMPORTANT for "issuing_bank": This is the LICENSED BANK that actually issues the Visa card, NOT the app/fintech company.
+- Look for phrases like: "issued by", "cards are issued by", "pursuant to a license from Visa", "Member FDIC", "banking services provided by"
+- Common issuing banks: Metropolitan Commercial Bank, Sutton Bank, Evolve Bank & Trust, Cross River Bank, Celtic Bank, Pathward, Stride Bank, Choice Financial Group, The Bancorp
+- The issuing bank is typically mentioned in Terms & Conditions, footer disclosures, or cardholder agreements
+- Do NOT confuse the app company with the issuing bank
+
 Return ONLY valid JSON with these fields:
 {
-    "company_name": "Official company name",
+    "company_name": "Official company name (REQUIRED - extract from website)",
+    "card_name": "Name of their Visa card product (REQUIRED - extract from website)",
+    "card_type": "Prepaid, Debit, Credit, and/or Virtual",
     "parent_company": "Parent or holding company if mentioned",
-    "issuing_bank": "Bank that issues the Visa card - look for phrases like issued by, issuing bank, pursuant to a license from Visa, member FDIC",
+    "issuing_bank": "The licensed bank that issues the card (NOT the app company)",
     "ceo_or_founders": "Names and titles like Name (Title); Name (Title)",
     "contact_email": "Contact email addresses",
     "physical_address": "Physical or mailing address",
-    "phone_number": "Phone number",
-    "card_name": "Name of their Visa card product",
-    "card_type": "Prepaid, Debit, Credit, and/or Virtual"
+    "phone_number": "Phone number"
 }
 
-Use empty string "" for fields not found. Return ONLY JSON.
+Use empty string "" for fields not found. Return ONLY valid JSON, no other text.
 
 WEBSITE CONTENT:
 """ + combined_text
