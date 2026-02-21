@@ -95,15 +95,28 @@ def serpapi_search(query, api_key):
         if is_discussion_only(link):
             continue
 
+        # Extract website URL (this is reliable)
         company_website = extract_company_website(link, snippet, source_platform)
 
+        # For App Store/Google Play, fetch metadata to get developer website
+        if source_platform == "App Store":
+            metadata = fetch_app_store_metadata(link)
+            if metadata and metadata.get("developer_website"):
+                company_website = metadata["developer_website"]
+        elif source_platform == "Google Play":
+            metadata = fetch_play_store_metadata(link)
+            if metadata and metadata.get("developer_website"):
+                company_website = metadata["developer_website"]
+
+        # card_name and company_name will be extracted by Claude during enrichment
+        # from the actual website content (much more accurate than parsing snippets)
         results.append({
             "source_platform": source_platform,
             "source_url": link,
-            "card_name": extract_card_name(title, snippet),
+            "card_name": "",  # Will be populated by Claude enrichment
             "card_type": detect_card_type(combined_text),
-            "company_name": extract_company_from_snippet(title, snippet),
-            "company_website": company_website if company_website else link,
+            "company_name": "",  # Will be populated by Claude enrichment
+            "company_website": company_website if company_website else "",
             "notes": snippet[:500],
         })
 
@@ -197,31 +210,101 @@ def detect_card_type(text):
 
 def extract_card_name(title, body):
     combined = title + " " + body
+
+    # Patterns to extract card names, including camelCase app names
     patterns = [
+        # CamelCase app names like BitPay, CashApp, Revolut
+        r'\b([A-Z][a-z]+(?:[A-Z][a-z]+)+)\b',
         r'([A-Z][A-Za-z0-9]+(?:\s+[A-Z][A-Za-z0-9]+)*)\s+(?:Visa|Card|card)',
         r'(?:Visa|card|Card)\s+(?:by|from)\s+([A-Z][A-Za-z0-9]+(?:\s+[A-Z][A-Za-z0-9]+)*)',
         r'([A-Z][A-Za-z0-9]{2,})\s+(?:prepaid|debit|credit|virtual)',
     ]
-    skip_words = [
+
+    # Expanded skip words including generic terms
+    skip_words = {
         "the", "a", "an", "this", "my", "your", "no", "new",
-        "best", "top", "get", "buy", "free", "any", "our",
-    ]
+        "best", "top", "get", "buy", "free", "any", "our", "how", "can", "i",
+        # Generic card/payment terms to skip
+        "visa", "mastercard", "debit", "credit", "prepaid", "virtual",
+        "card", "cards", "payment", "payments", "service", "services",
+        # Marketing/KYC adjectives
+        "cheapest", "anonymous", "crypto", "bitcoin", "kyc", "verification",
+        "instant", "fast", "easy", "simple", "secure", "safe", "low", "fee",
+        # Other generic terms
+        "app", "apps", "download", "store", "play", "google", "apple",
+        # Question words (for Reddit titles)
+        "what", "where", "when", "why", "which", "who",
+    }
+
+    def is_valid_name(name):
+        """Check if name contains at least one non-skip word."""
+        words = name.lower().split()
+        non_skip_words = [w for w in words if w not in skip_words]
+        return len(non_skip_words) > 0
+
+    def clean_name(name):
+        """Remove skip words from name, keeping only meaningful parts."""
+        words = name.split()
+        cleaned = [w for w in words if w.lower() not in skip_words]
+        return " ".join(cleaned)
+
     for pattern in patterns:
-        match = re.search(pattern, combined)
-        if match:
+        matches = re.finditer(pattern, combined)
+        for match in matches:
             name = match.group(1).strip()
-            if name.lower() not in skip_words:
-                return name
+            if len(name) > 2 and is_valid_name(name):
+                cleaned = clean_name(name)
+                if cleaned and len(cleaned) > 2:
+                    return cleaned
+
+    # Fallback: use cleaned title but filter marketing words
     clean_title = re.split(r'\s*[-|:\u2013\u2014]', title)[0].strip()
-    return clean_title[:100] if clean_title else "Unknown"
+
+    # Comprehensive list of words to remove from fallback title
+    filter_words = [
+        "cheapest", "best", "top", "anonymous", "free", "new", "ultimate",
+        "no kyc", "no-kyc", "nokyc", "without kyc", "kyc-free", "kyc free",
+        "no verification", "no id", "anonymous",
+        "visa", "mastercard", "debit", "credit", "prepaid", "virtual",
+        "card", "cards",
+    ]
+    for word in filter_words:
+        clean_title = re.sub(r'\b' + re.escape(word) + r'\b', '', clean_title, flags=re.IGNORECASE)
+    clean_title = re.sub(r'\s+', ' ', clean_title).strip()
+
+    # If after cleaning we only have generic words left, return Unknown
+    if not clean_title or clean_title.lower() in ["visa", "card", "debit", "credit", ""]:
+        return "Unknown"
+
+    return clean_title[:100]
 
 
 def extract_company_from_snippet(title, snippet):
     combined = title + " " + snippet
-    pattern = r'(?:by|from|offered by|powered by|issued by)\s+([A-Z][A-Za-z0-9]+(?:\s+[A-Z][A-Za-z0-9]+)*)'
-    match = re.search(pattern, combined)
-    if match:
-        return match.group(1).strip()
+
+    # Skip list for platform companies that shouldn't be returned as the company
+    skip_companies = [
+        "google llc", "google", "apple inc", "apple", "amazon",
+        "microsoft", "meta", "facebook",
+        # Card networks (not companies)
+        "visa", "mastercard", "amex", "american express",
+    ]
+
+    # Patterns to find company names
+    patterns = [
+        r'(?:by|from|offered by|powered by|issued by|developed by|created by)\s+([A-Z][A-Za-z0-9]+(?:\s+[A-Z][A-Za-z0-9]+)*)',
+        # Company suffixes like "Something Inc" or "Company LLC"
+        r'\b([A-Z][A-Za-z0-9]+(?:\s+[A-Z][A-Za-z0-9]+)*)\s+(?:Inc\.?|LLC|Ltd\.?|Corp\.?|Corporation|Company|GmbH|AG|PLC)',
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, combined, re.IGNORECASE)
+        if match:
+            company = match.group(1).strip()
+            # Skip platform companies
+            if company.lower() not in skip_companies:
+                return company
+
     return ""
 
 
@@ -236,8 +319,127 @@ def extract_company_website(source_url, snippet, platform):
             if not any(s in u for s in skip):
                 return url
         return ""
-    if platform.startswith(("Web", "App Store", "Google Play")):
+    # For App Store/Google Play, return empty to force metadata fetch
+    if platform in ("App Store", "Google Play"):
+        return ""
+    if platform.startswith("Web"):
         from urllib.parse import urlparse
         parsed = urlparse(source_url)
         return parsed.scheme + "://" + parsed.netloc
     return source_url
+
+
+def fetch_app_store_metadata(url):
+    """Fetch Apple App Store page and extract app name, developer, and developer website."""
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        }
+        resp = requests.get(url, headers=headers, timeout=15)
+        resp.raise_for_status()
+        html = resp.text
+
+        result = {"app_name": "", "developer_name": "", "developer_website": ""}
+
+        # Extract app name from title tag
+        title_match = re.search(r'<title[^>]*>([^<]+)</title>', html, re.IGNORECASE)
+        if title_match:
+            title = title_match.group(1)
+            # Format: "AppName on the App Store" or "AppName - App Store"
+            app_name = re.sub(r'\s*[-–—]\s*(App Store|Apple).*$', '', title, flags=re.IGNORECASE)
+            app_name = re.sub(r'\s+on the App Store.*$', '', app_name, flags=re.IGNORECASE)
+            result["app_name"] = app_name.strip()
+
+        # Extract developer name - look for "by" or developer link
+        dev_patterns = [
+            r'<a[^>]+href="[^"]*developer[^"]*"[^>]*>([^<]+)</a>',
+            r'"sellerName"\s*:\s*"([^"]+)"',
+            r'By\s+<a[^>]*>([^<]+)</a>',
+            r'class="[^"]*developer[^"]*"[^>]*>([^<]+)<',
+        ]
+        for pattern in dev_patterns:
+            match = re.search(pattern, html, re.IGNORECASE)
+            if match:
+                result["developer_name"] = match.group(1).strip()
+                break
+
+        # Extract developer website - look for "Website" or "Developer Website" link
+        website_patterns = [
+            r'<a[^>]+href="([^"]+)"[^>]*>\s*(?:Developer\s+)?Website\s*</a>',
+            r'"supportUrl"\s*:\s*"([^"]+)"',
+            r'<a[^>]+href="([^"]+)"[^>]*class="[^"]*website[^"]*"',
+        ]
+        for pattern in website_patterns:
+            match = re.search(pattern, html, re.IGNORECASE)
+            if match:
+                website = match.group(1)
+                # Skip Apple domains
+                if "apple.com" not in website.lower():
+                    result["developer_website"] = website
+                    break
+
+        logger.debug("App Store metadata: %s", result)
+        return result
+    except Exception as e:
+        logger.debug("Could not fetch App Store metadata from %s: %s", url, e)
+        return None
+
+
+def fetch_play_store_metadata(url):
+    """Fetch Google Play Store page and extract app name, developer, and developer website."""
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        }
+        resp = requests.get(url, headers=headers, timeout=15)
+        resp.raise_for_status()
+        html = resp.text
+
+        result = {"app_name": "", "developer_name": "", "developer_website": ""}
+
+        # Extract app name from title
+        title_match = re.search(r'<title[^>]*>([^<]+)</title>', html, re.IGNORECASE)
+        if title_match:
+            title = title_match.group(1)
+            # Format: "AppName - Apps on Google Play"
+            app_name = re.sub(r'\s*[-–—]\s*Apps on Google Play.*$', '', title, flags=re.IGNORECASE)
+            result["app_name"] = app_name.strip()
+
+        # Extract developer name
+        dev_patterns = [
+            r'<a[^>]+href="/store/apps/developer[^"]*"[^>]*>([^<]+)</a>',
+            r'itemprop="author"[^>]*>.*?itemprop="name"[^>]*>([^<]+)<',
+            r'"developer"[^}]*"name"\s*:\s*"([^"]+)"',
+            r'<span[^>]*>Offered by</span>\s*<span[^>]*>([^<]+)</span>',
+        ]
+        for pattern in dev_patterns:
+            match = re.search(pattern, html, re.IGNORECASE | re.DOTALL)
+            if match:
+                dev_name = match.group(1).strip()
+                # Skip Google LLC
+                if dev_name.lower() != "google llc":
+                    result["developer_name"] = dev_name
+                    break
+
+        # Extract developer website - "Visit website" link
+        website_patterns = [
+            r'<a[^>]+href="([^"]+)"[^>]*>Visit\s+website</a>',
+            r'"developerWebsite"\s*:\s*"([^"]+)"',
+            r'<a[^>]+href="([^"]+)"[^>]*class="[^"]*dev-link[^"]*"',
+        ]
+        for pattern in website_patterns:
+            match = re.search(pattern, html, re.IGNORECASE)
+            if match:
+                website = match.group(1)
+                # Skip Google/Play Store domains
+                if "google.com" not in website.lower() and "play.google.com" not in website.lower():
+                    result["developer_website"] = website
+                    break
+
+        logger.debug("Play Store metadata: %s", result)
+        return result
+    except Exception as e:
+        logger.debug("Could not fetch Play Store metadata from %s: %s", url, e)
+        return None
