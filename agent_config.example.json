@@ -1,0 +1,32 @@
+{
+    "store_password": "CHANGE_ME_to_a_strong_passphrase",
+
+    "auto_deposit": false,
+
+    "global_agent": {
+        "headless": true,
+        "proxy": null
+    },
+
+    "crypto": {
+        "evm": {
+            "rpc_url": "https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY",
+            "private_key": "0xYOUR_PRIVATE_KEY_NEVER_COMMIT_THIS"
+        }
+    },
+
+    "agent_ezzocard": {
+        "denomination": 25,
+        "crypto": "btc"
+    },
+
+    "agent_solcard": {
+        "proxy": "socks5://user:pass@proxy.example.com:1080"
+    },
+
+    "agent_zeroid_cc": {
+        "telegram_api_id": 12345678,
+        "telegram_api_hash": "your_api_hash_here",
+        "telegram_phone": "+1234567890"
+    }
+}
