@@ -47,6 +47,7 @@ class CardResult:
     card_id: str = field(default_factory=lambda: str(uuid.uuid4())[:12])
     status: SignupStatus = SignupStatus.PENDING
     network: CardNetwork = CardNetwork.UNKNOWN
+    bin_number: Optional[str] = None          # First 8 digits (BIN / IIN)
     card_number_last4: Optional[str] = None
     expiry: Optional[str] = None
     balance: float = 0.0
@@ -299,6 +300,48 @@ class BaseCardAgent(ABC):
         """Human-like random delay between actions."""
         import random
         await asyncio.sleep(random.uniform(min_s, max_s))
+
+    @staticmethod
+    def _extract_card_details(text: str) -> dict:
+        """
+        Extract card number, expiry, and CVV from page text.
+        Returns dict with 'full_number', 'bin' (first 8), 'last4', 'expiry', 'cvv'.
+        Card numbers are 13-19 digits, typically 16. May appear with spaces/dashes.
+        """
+        import re
+        result = {"full_number": None, "bin": None, "last4": None, "expiry": None, "cvv": None}
+
+        # Find card numbers: 13-19 digit sequences (with optional spaces/dashes)
+        # Visa: starts with 4, Mastercard: starts with 5 or 2
+        card_patterns = [
+            r"(\b[4-5]\d{3}[\s-]?\d{4}[\s-]?\d{4}[\s-]?\d{4}\b)",   # 16-digit with separators
+            r"(\b[4-5]\d{15}\b)",                                       # 16-digit no separators
+            r"(\b[4-5]\d{3}[\s-]?\d{4}[\s-]?\d{4}[\s-]?\d{1,7}\b)",  # 13-19 digit
+            r"(\b[2]\d{3}[\s-]?\d{4}[\s-]?\d{4}[\s-]?\d{4}\b)",      # MC 2xxx range
+        ]
+
+        for pattern in card_patterns:
+            match = re.search(pattern, text)
+            if match:
+                raw = match.group(1)
+                digits_only = re.sub(r"[\s-]", "", raw)
+                if 13 <= len(digits_only) <= 19:
+                    result["full_number"] = digits_only
+                    result["bin"] = digits_only[:8]
+                    result["last4"] = digits_only[-4:]
+                    break
+
+        # Find expiry: MM/YY or MM/YYYY
+        exp_match = re.search(r"\b(0[1-9]|1[0-2])\s*[/\-]\s*(\d{2,4})\b", text)
+        if exp_match:
+            result["expiry"] = f"{exp_match.group(1)}/{exp_match.group(2)}"
+
+        # Find CVV: 3-4 digit code (look near keywords)
+        cvv_match = re.search(r"(?:CVV|CVC|CVV2|CVC2|Security)[:\s]*(\d{3,4})", text, re.IGNORECASE)
+        if cvv_match:
+            result["cvv"] = cvv_match.group(1)
+
+        return result
 
     def __repr__(self):
         return f"<{self.__class__.__name__} provider={self.provider_name}>"

@@ -28,6 +28,7 @@ from datetime import datetime, timezone
 
 from agents import AgentRegistry
 from agents.base_agent import CardResult, SignupStatus
+from agents.bin_lookup import BINLookup
 from config.providers import ACTIVE_CARD_PROVIDERS, PROVIDERS
 from storage import CardStore
 from crypto import PaymentManager
@@ -148,10 +149,121 @@ async def cmd_signup(args, config: dict):
         }.get(card.status, "⏳")
 
         print(f"  {status_icon} {card.provider:20s} → {card.status.value}")
+        if card.bin_number:
+            print(f"     BIN:     {card.bin_number} ({card.network.value})")
+        if card.card_number_last4:
+            print(f"     Last 4:  {card.card_number_last4}")
+        if card.expiry:
+            print(f"     Expiry:  {card.expiry}")
         if card.error:
-            print(f"     Error: {card.error}")
+            print(f"     Error:   {card.error}")
         if card.deposit_address:
             print(f"     Deposit: {card.deposit_address[:20]}...")
+
+    # Write JSON output file (with BIN lookups)
+    await _write_output_file(results)
+
+
+async def _write_output_file(results: list):
+    """Write results to output/cards_YYYYMMDD.json with BIN lookup data."""
+    from pathlib import Path
+
+    output_dir = Path("output")
+    output_dir.mkdir(exist_ok=True)
+
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_path = output_dir / f"cards_{ts}.json"
+
+    # Run BIN lookups for all cards that have BINs
+    bin_lookup = BINLookup()
+    bins_to_lookup = [c.bin_number for c in results if c.bin_number]
+    bin_results = {}
+
+    if bins_to_lookup:
+        logger.info(f"Looking up {len(bins_to_lookup)} BIN(s)...")
+        for bin_num in bins_to_lookup:
+            info = await bin_lookup.lookup(bin_num)
+            bin_results[bin_num] = info
+            logger.info(f"  BIN {bin_num}: {info.summary}")
+
+    output_data = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "total_attempted": len(results),
+        "total_issued": sum(1 for c in results if c.status == SignupStatus.CARD_ISSUED),
+        "total_awaiting": sum(1 for c in results if c.status == SignupStatus.AWAITING_DEPOSIT),
+        "total_failed": sum(1 for c in results if c.status == SignupStatus.FAILED),
+        "bins_collected": [],
+        "cards": [],
+    }
+
+    for card in results:
+        bin_info = bin_results.get(card.bin_number)
+
+        card_entry = {
+            "provider": card.provider,
+            "status": card.status.value,
+            "network": card.network.value,
+            "bin_number": card.bin_number,
+            "card_number_last4": card.card_number_last4,
+            "expiry": card.expiry,
+            "denomination": card.metadata.get("denomination_usd"),
+            "card_type": card.metadata.get("card_color"),
+            "created_at": card.created_at,
+        }
+
+        # Add BIN lookup data if available
+        if bin_info and bin_info.issuer_bank:
+            card_entry["issuer_bank"] = bin_info.issuer_bank
+            card_entry["issuer_country"] = bin_info.country_code
+            card_entry["card_scheme"] = bin_info.scheme
+            card_entry["card_category"] = bin_info.category
+            card_entry["is_prepaid"] = bin_info.is_prepaid
+            card_entry["bin_lookup_source"] = bin_info.source
+
+        output_data["cards"].append(card_entry)
+
+        # Collect BINs with full lookup context
+        if card.bin_number:
+            bin_entry = {
+                "bin": card.bin_number,
+                "provider": card.provider,
+                "network": card.network.value,
+                "card_type": card.metadata.get("card_color", "unknown"),
+                "denomination": card.metadata.get("denomination_usd"),
+            }
+            if bin_info and bin_info.issuer_bank:
+                bin_entry.update({
+                    "issuer_bank": bin_info.issuer_bank,
+                    "issuer_country": bin_info.country_code,
+                    "issuer_url": bin_info.issuer_url,
+                    "card_scheme": bin_info.scheme,
+                    "card_category": bin_info.category,
+                    "is_prepaid": bin_info.is_prepaid,
+                    "currency": bin_info.currency,
+                    "lookup_source": bin_info.source,
+                })
+            output_data["bins_collected"].append(bin_entry)
+
+    with open(output_path, "w") as f:
+        json.dump(output_data, f, indent=2)
+
+    logger.info(f"Output written to {output_path}")
+    print(f"\nOutput file: {output_path}")
+
+    # Also print a BIN summary table if any were collected
+    if output_data["bins_collected"]:
+        print(f"\n{'='*60}")
+        print("BIN NUMBERS COLLECTED")
+        print(f"{'='*60}")
+        print(f"  {'BIN':<12} {'Network':<10} {'Issuer Bank':<30} {'Country':<6} {'Provider'}")
+        print(f"  {'-'*76}")
+        for b in output_data["bins_collected"]:
+            bank = b.get('issuer_bank', '?')
+            country = b.get('issuer_country', '?')
+            print(
+                f"  {b['bin']:<12} {b['network']:<10} {bank:<30} "
+                f"{country:<6} {b['provider']}"
+            )
 
 
 async def cmd_health_check(args, config: dict):
@@ -192,12 +304,13 @@ async def cmd_list(args, config: dict):
         print("No cards stored.")
         return
 
-    print(f"\n{'Provider':<20} {'Status':<18} {'Network':<12} {'Card ID':<14} {'Created'}")
-    print("-" * 80)
+    print(f"\n{'Provider':<20} {'Status':<18} {'Network':<12} {'BIN':<12} {'Last4':<8} {'Card ID':<14} {'Created'}")
+    print("-" * 100)
     for card in cards:
         print(
             f"{card.provider:<20} {card.status.value:<18} "
-            f"{card.network.value:<12} {card.card_id[:12]:<14} "
+            f"{card.network.value:<12} {(card.bin_number or '-'):<12} "
+            f"{(card.card_number_last4 or '-'):<8} {card.card_id[:12]:<14} "
             f"{card.created_at[:10]}"
         )
 
