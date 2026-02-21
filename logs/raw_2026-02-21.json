@@ -1,0 +1,45 @@
+[
+  {
+    "source_platform": "X/Twitter",
+    "source_url": "https://x.com/ravi_riley/status/2024606457040142820",
+    "card_name": "great explainer on \"no",
+    "card_type": "Unknown",
+    "company_name": "X Corp.",
+    "company_website": "https://x.com",
+    "notes": "As long as Visa and Mastercard sit underneath these products, unlimited no KYC spending is not possible. No amount of branding, clever messaging ...",
+    "terms_conditions_url": "https://x.com/tos",
+    "privacy_policy_url": "https://x.com/privacy",
+    "physical_address": "865 FM 1209, Building 2, Bastrop, TX 78602 U.S.A.",
+    "date_found": "2026-02-21"
+  },
+  {
+    "source_platform": "Reddit r/defi",
+    "source_url": "https://www.reddit.com/r/defi/comments/1r75ket/the_best_cardnoncard_options_to_spend_crypto_or/",
+    "card_name": "The best card/non",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://www.reddit.com/r/defi/comments/1r75ket/the_best_cardnoncard_options_to_spend_crypto_or/",
+    "notes": "... kyc free and free from banks tbh. most are mastercard and visa so if they cancel the license, it'll screw you over. Efficient_Post1734. | Could not fetch website",
+    "date_found": "2026-02-21"
+  },
+  {
+    "source_platform": "Web (https://majority.com \u203a visa-debit-card \u203a no-ssn)",
+    "source_url": "https://majority.com/en/visa-debit-card/no-ssn?srsltid=AfmBOooCyVH0L5PtfAsOj_EClQ72TfGJJuuGj_gGuZWstQZwb0ZxsVOo",
+    "card_name": "Debit",
+    "card_type": "Debit",
+    "company_name": "",
+    "company_website": "https://majority.com",
+    "notes": "Get a free MAJORITY Visa Debit Card whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more. | Could not fetch website",
+    "date_found": "2026-02-21"
+  },
+  {
+    "source_platform": "Web (https://www.binance.com \u203a square \u203a post)",
+    "source_url": "https://www.binance.com/en/square/post/293789808150850",
+    "card_name": "Visa",
+    "card_type": "Debit/Virtual",
+    "company_name": "",
+    "company_website": "https://www.binance.com",
+    "notes": "@Quantoz is now a direct Visa principal member, allowing it to issue virtual debit cards backed by regulated stablecoins like EURQ on #algorand ...",
+    "date_found": "2026-02-21"
+  }
+]
