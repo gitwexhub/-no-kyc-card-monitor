@@ -1,0 +1,35 @@
+[
+  {
+    "source_platform": "Reddit r/btc",
+    "source_url": "https://www.reddit.com/r/btc/comments/1r7ezbh/eu_prepaid_visamc_cards_no_kyc_to_buy_with_crypto/",
+    "card_name": "",
+    "card_type": "Prepaid",
+    "company_name": "",
+    "company_website": "",
+    "notes": "... KYC free. Upvote 0. Downvote 1 Go to comments. Share ... Crypto Visa Signature card review - in short, not good. 20. 11. Best non kyc crypto ... | No website found",
+    "date_found": "2026-02-22"
+  },
+  {
+    "source_platform": "Web (https://majority.com \u203a visa-debit-card \u203a no-ssn)",
+    "source_url": "https://majority.com/en/visa-debit-card/no-ssn?srsltid=AfmBOoph-L3htw1-BZZdVmSzP5FBOJ47AdH3gZaJZvxtW188TFSJqwJE",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Get a free MAJORITY Visa Debit Card whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more. | Could not fetch website",
+    "date_found": "2026-02-22"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=com.epifi.paisa&listing=credit_card",
+    "card_name": "AmpliFi Fi-Federal Credit Card",
+    "card_type": "Credit",
+    "company_name": "",
+    "company_website": "https://play.google.com",
+    "notes": "It works wherever VISA cards are accepted. *There is no forex markup on any international payments (0% forex) *No forex fee will be charged from your Credit ...",
+    "play_store_link": "https://play.google.com/store/apps/details?id\\u003dcom.sega.FootballClubChampions\\u0026rdid\\u003dcom.sega.FootballClubChampions\\u0026feature\\u003dmd\\u0026offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "date_found": "2026-02-22"
+  }
+]
