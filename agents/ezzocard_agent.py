@@ -90,10 +90,12 @@ class EzzocardAgent(BaseCardAgent):
     async def _do_signup(self, page: Page) -> CardResult:
         """
         Real Ezzocard purchase flow using actual DOM structure.
+        If monitor_only=True in config, just scan catalog and return available cards.
         """
         card = CardResult(provider=self.provider_name, signup_url=self.signup_url)
 
         # ── Config ────────────────────────────────────────────────────
+        monitor_only = self.config.get("monitor_only", True)  # Default to monitor mode
         target_denomination = self.config.get("denomination", 100)
         target_card_type = self.config.get("card_type", "violet")
         target_crypto = self.config.get("crypto", "btc")
@@ -109,11 +111,11 @@ class EzzocardAgent(BaseCardAgent):
 
         self.logger.info(
             f"Target: ${target_denomination} {target_color} {target_network}, "
-            f"pay with {target_crypto}"
+            f"pay with {target_crypto}" + (" (MONITOR ONLY)" if monitor_only else "")
         )
 
-        # ── Step 1: Find the matching card tile in the catalog ────────
-        self.logger.info("Step 1: Finding card in catalog...")
+        # ── Step 1: Scan the catalog ────────────────────────────────
+        self.logger.info("Step 1: Scanning card catalog...")
 
         await page.evaluate(
             "document.querySelector('#order-form')?.scrollIntoView()"
@@ -126,6 +128,8 @@ class EzzocardAgent(BaseCardAgent):
         tile_count = await product_tiles.count()
         self.logger.info(f"Found {tile_count} product tiles")
 
+        # Collect all available cards
+        available_cards = []
         target_tile = None
         target_price = None
 
@@ -133,23 +137,74 @@ class EzzocardAgent(BaseCardAgent):
             tile = product_tiles.nth(i)
             tile_text = (await tile.text_content() or "").lower().strip()
 
-            # Match: denomination + color + network + in stock
+            # Skip non-product tiles
+            if not any(c in tile_text for c in ["visa", "mastercard", "gold", "violet", "lime"]):
+                continue
+
+            # Extract card info
+            is_out_of_stock = "out of stock" in tile_text
+            price_match = re.search(r"price\s*\$([\d,.]+)", tile_text)
+            denom_match = re.search(r"\$\s*(\d+)\s*(usd|cad)", tile_text)
+
+            card_data = {
+                "raw_text": tile_text[:200],
+                "in_stock": not is_out_of_stock,
+                "price": price_match.group(1) if price_match else None,
+                "denomination": denom_match.group(1) if denom_match else None,
+                "currency": denom_match.group(2).upper() if denom_match else "USD",
+            }
+
+            # Detect card type
+            for card_type, info in CARD_TYPES.items():
+                if info["color"] in tile_text and info["network"] in tile_text:
+                    card_data["type"] = card_type
+                    card_data["color"] = info["color"]
+                    card_data["network"] = info["network"]
+                    break
+
+            available_cards.append(card_data)
+
+            # Check if this matches our target
             has_denom = str(target_denomination) in tile_text
             has_color = target_color.lower() in tile_text
             has_network = target_network.lower() in tile_text
-            is_out_of_stock = "out of stock" in tile_text
 
             if has_denom and has_color and has_network and not is_out_of_stock:
                 target_tile = tile
-                price_match = re.search(r"\$([\d,.]+)", tile_text)
-                if price_match:
-                    target_price = price_match.group(1)
+                target_price = card_data.get("price")
                 self.logger.info(
-                    f"Found: ${target_denomination} {target_color} "
+                    f"Found target: ${target_denomination} {target_color} "
                     f"{target_network} @ ${target_price}"
                 )
-                break
 
+        # Store catalog data in metadata
+        in_stock_count = sum(1 for c in available_cards if c.get("in_stock"))
+        card.metadata["catalog"] = available_cards
+        card.metadata["total_products"] = len(available_cards)
+        card.metadata["in_stock_count"] = in_stock_count
+        self.logger.info(f"Catalog: {len(available_cards)} products, {in_stock_count} in stock")
+
+        await self._screenshot(page, "ezzocard_catalog")
+
+        # ── Monitor Only Mode: Return catalog data without purchasing ──
+        if monitor_only:
+            if target_tile and target_price:
+                card.status = SignupStatus.AWAITING_DEPOSIT  # Mark as "ready to buy"
+                card.metadata["target_found"] = True
+                card.metadata["target_price"] = target_price
+                card.metadata["denomination_usd"] = target_denomination
+                card.metadata["card_color"] = target_color
+                card.metadata["card_network"] = target_network
+                self.logger.info(f"MONITOR: Target card available @ ${target_price}")
+            else:
+                card.status = SignupStatus.FAILED
+                card.metadata["target_found"] = False
+                card.error = f"Target card not available: ${target_denomination} {target_color} {target_network}"
+                self.logger.info(f"MONITOR: Target card NOT available")
+
+            return card
+
+        # ── Continue with purchase flow if not monitor_only ──────────
         if not target_tile:
             card.status = SignupStatus.FAILED
             card.error = (
