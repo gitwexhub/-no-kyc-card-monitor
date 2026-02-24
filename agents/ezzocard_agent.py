@@ -170,12 +170,20 @@ class EzzocardAgent(BaseCardAgent):
             has_network = target_network.lower() in tile_text
 
             if has_denom and has_color and has_network and not is_out_of_stock:
-                target_tile = tile
-                target_price = card_data.get("price")
+                current_price = card_data.get("price")
                 self.logger.info(
                     f"Found target: ${target_denomination} {target_color} "
-                    f"{target_network} @ ${target_price}"
+                    f"{target_network} @ ${current_price}"
                 )
+                # Keep the cheapest price found
+                try:
+                    if target_price is None or float(current_price) < float(target_price):
+                        target_tile = tile
+                        target_price = current_price
+                except (ValueError, TypeError):
+                    if target_tile is None:
+                        target_tile = tile
+                        target_price = current_price
 
         # Store catalog data in metadata
         in_stock_count = sum(1 for c in available_cards if c.get("in_stock"))
