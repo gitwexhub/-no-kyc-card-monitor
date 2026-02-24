@@ -164,14 +164,38 @@ class EzzocardAgent(BaseCardAgent):
         # ── Step 2: Set quantity to 1 ─────────────────────────────────
         self.logger.info("Step 2: Setting quantity to 1...")
 
-        qty_input = target_tile.locator("input")
-        if await qty_input.count() > 0:
-            await qty_input.first.click()
-            await qty_input.first.fill("1")
-            # Trigger change event
-            await qty_input.first.press("Tab")
-            await self._random_delay(0.5, 1.5)
-            self.logger.info("Quantity set to 1")
+        # Target quantity input specifically (name contains 'quant', or class 'input-number')
+        # Avoid +/- buttons (type='button') and hidden inputs
+        qty_selectors = [
+            "input[name*='quant']",
+            "input.input-number",
+            "input.quantity",
+            "input[type='number']",
+        ]
+
+        qty_found = False
+        for selector in qty_selectors:
+            qty_input = target_tile.locator(selector)
+            if await qty_input.count() > 0:
+                inp = qty_input.first
+                if await inp.is_visible() and await inp.is_enabled():
+                    await inp.click()
+                    await inp.fill("1")
+                    await inp.press("Tab")
+                    await self._random_delay(0.5, 1.5)
+                    self.logger.info(f"Quantity set to 1 (via {selector})")
+                    qty_found = True
+                    break
+
+        if not qty_found:
+            # Fallback: click + button to increment from 0 to 1
+            plus_btn = target_tile.locator("input[data-type='plus'], button[data-type='plus'], .btn-plus")
+            if await plus_btn.count() > 0:
+                await plus_btn.first.click()
+                self.logger.info("Quantity set via + button")
+                await self._random_delay(0.5, 1.5)
+            else:
+                self.logger.warning("No quantity input found")
 
         await self._screenshot(page, "ezzocard_step2")
 
@@ -188,38 +212,37 @@ class EzzocardAgent(BaseCardAgent):
         crypto_selected = False
 
         # The crypto options are likely radio buttons or clickable labels
-        # Try exact text match first, then partial
-        for selector in [
-            f"text='{crypto_label}'",
-            f"text={crypto_label}",
+        # Try multiple selector strategies
+        crypto_selectors = [
             f"label:has-text('{crypto_label}')",
-            f"input[value='{crypto_label}']",
-            f"[id*='{crypto_label}']",
-        ]:
+            f"input[value*='{target_crypto.upper()}']",
+            f"input[value*='BTC']",
+            f"label:has-text('BTC')",
+            f"[data-crypto='{target_crypto}']",
+            f".crypto-option:has-text('{target_crypto.upper()}')",
+            "input[name*='crypto'][value*='btc']",
+            "input[name*='payment'][value*='btc']",
+        ]
+
+        for selector in crypto_selectors:
             try:
                 el = page.locator(selector)
                 if await el.count() > 0:
-                    await el.first.click()
-                    crypto_selected = True
-                    card.deposit_currency = target_crypto.upper().replace("_", ".")
-                    self.logger.info(f"Selected: {crypto_label}")
-                    await self._random_delay()
-                    break
+                    elem = el.first
+                    if await elem.is_visible():
+                        await elem.click()
+                        crypto_selected = True
+                        card.deposit_currency = target_crypto.upper().replace("_", ".")
+                        self.logger.info(f"Selected crypto via: {selector}")
+                        await self._random_delay()
+                        break
             except Exception:
                 continue
 
         if not crypto_selected:
-            self.logger.warning(f"Could not select {target_crypto}, trying BTC")
-            for sel in ["text=BTC_N", "text=BTC"]:
-                try:
-                    el = page.locator(sel)
-                    if await el.count() > 0:
-                        await el.first.click()
-                        card.deposit_currency = "BTC"
-                        crypto_selected = True
-                        break
-                except Exception:
-                    continue
+            # BTC is often default, so just log and continue
+            self.logger.warning(f"Could not explicitly select {target_crypto}, assuming BTC default")
+            card.deposit_currency = "BTC"
 
         await self._screenshot(page, "ezzocard_step3")
 
@@ -257,13 +280,15 @@ class EzzocardAgent(BaseCardAgent):
                 self.logger.info(f"Entered email: {email}")
                 await self._random_delay()
 
-        # Look for "Pay with" confirmation button
-        pay_confirm = page.locator("text=/Pay with/i")
+        # Look for "Pay with" confirmation button (not links)
+        pay_confirm = page.locator("button:has-text('Pay with'), input[type='submit']:has-text('Pay'), .btn:has-text('Pay with')")
         if await pay_confirm.count() > 0:
-            await pay_confirm.first.click()
-            self.logger.info("Clicked Pay with confirmation")
-            await page.wait_for_timeout(5000)
-            await self._screenshot(page, "ezzocard_step4b")
+            btn = pay_confirm.first
+            if await btn.is_visible():
+                await btn.click()
+                self.logger.info("Clicked Pay with confirmation")
+                await page.wait_for_timeout(5000)
+                await self._screenshot(page, "ezzocard_step4b")
 
         # ── Step 5: Extract deposit address + amount ──────────────────
         self.logger.info("Step 5: Extracting deposit details...")
