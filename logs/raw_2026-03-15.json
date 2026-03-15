@@ -1,0 +1,46 @@
+[
+  {
+    "source_platform": "Web (https://usa.visa.com \u203a pay-with-visa \u203a find-card \u203a buy-g...)",
+    "source_url": "https://usa.visa.com/pay-with-visa/find-card/buy-gift-card",
+    "card_name": "Visa Card",
+    "card_type": "Credit, Debit, and Prepaid",
+    "company_name": "Visa Inc.",
+    "company_website": "https://usa.visa.com",
+    "notes": "Visa gift cards are available online. A gift anyone can appreciate. Choose from our selection of gift card designs or customize your own.",
+    "date_found": "2026-03-15"
+  },
+  {
+    "source_platform": "Web (https://www.perfectgift.com \u203a personalized-visa-gift-card)",
+    "source_url": "https://www.perfectgift.com/personalized-visa-gift-card?srsltid=AfmBOopjULT9gfG6pZ5mSgQ7ZpMaHL4QTaDaFTOt414bghqdYgGY0YJd",
+    "card_name": "Perfectgift Card",
+    "card_type": "Unknown",
+    "company_name": "Perfectgift",
+    "company_website": "https://www.perfectgift.com",
+    "notes": "Physical personalized Visa gift card with greeting card. Printed and shipped same-day for orders placed by 4pm ET (Mon-Sat). | Could not fetch website",
+    "date_found": "2026-03-15"
+  },
+  {
+    "source_platform": "Web (https://majority.com \u203a visa-debit-card \u203a no-ssn)",
+    "source_url": "https://majority.com/en/visa-debit-card/no-ssn?srsltid=AfmBOoqFar0L4F5k76NYll6WwNwSKIZEpeV0QENmq-ulcJH21dwNd9Ob",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Get a free MAJORITY Visa Debit Card whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more. | Could not fetch website",
+    "date_found": "2026-03-15"
+  },
+  {
+    "source_platform": "Web (https://glenbrook.com \u203a payments_news \u203a visa-zelf-lau...)",
+    "source_url": "https://glenbrook.com/payments_news/visa-zelf-launches-anonymous-debit-card-eligible-for-crypto-top-up/",
+    "card_name": "Glenbrook Partners, LLC Card",
+    "card_type": "Debit",
+    "company_name": "Glenbrook Partners, LLC",
+    "company_website": "https://glenbrook.com",
+    "notes": "\u201cVisa is once again involved in launching an anonymous debit card eligible for crypto top-ups, thanks to a project by ZELF, a US-based fintech company.",
+    "privacy_policy_url": "https://glenbrook.com/privacy-policy/\u201d",
+    "ceo_or_founders": "Carol Coye Benson (Founding Partner); Scott Loftesness (Founding Partner); Allen Weinberg (Founding Partner)",
+    "contact_email": "info@glenbrook.com",
+    "phone_number": "(850) 318-4340",
+    "date_found": "2026-03-15"
+  }
+]
