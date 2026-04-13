@@ -1,0 +1,92 @@
+[
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog \u203a crypto-prepaid-cards)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AfmBOoopOcPYfC9gPcJu8oPYk47aWmSPpN2DxhJSjn_oQhMeuMKRW4N9",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid/Virtual",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Buy crypto prepaid Visa & Mastercard with Bitcoin, ETH & 300+ tokens. Spend anywhere, no bank account. No KYC, instant virtual card.",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-04-13"
+  },
+  {
+    "source_platform": "Web (https://1stpal.com \u203a Prepaid Virtual Cards)",
+    "source_url": "https://1stpal.com/Store/virtual-payment-card-no-kyc/?srsltid=AfmBOopOTc0GoKZe_fzJubjY79wZEnFKldy3YnhR8ZkPgGgFFkqij6p3",
+    "card_name": "1Stpal Card",
+    "card_type": "Virtual",
+    "company_name": "1Stpal",
+    "company_website": "https://1stpal.com",
+    "notes": "Reloadable Virtual Visa/Master Card NO KYC [ BETA ] ... $12.49 Original price was: $12.49. $11.99 Current price is: $11.99. ... $44.99 Original price was: $44.99. $ ... | Could not fetch website",
+    "date_found": "2026-04-13"
+  },
+  {
+    "source_platform": "Web (https://defiprime.com \u203a non-custodial-crypto-debit-cards)",
+    "source_url": "https://defiprime.com/non-custodial-crypto-debit-cards",
+    "card_name": "Defiprime Card",
+    "card_type": "Debit/Virtual",
+    "company_name": "Defiprime",
+    "company_website": "https://defiprime.com",
+    "notes": "Cypher offers a free virtual Visa card that can be easily funded with USDC or other tokens. It supports cross-chain assets, allowing you to top ...",
+    "date_found": "2026-04-13"
+  },
+  {
+    "source_platform": "Web (https://www.theblock.co \u203a post \u203a stablecoin-volumes-on...)",
+    "source_url": "https://www.theblock.co/post/396745/stablecoin-volumes-onchain-payments-rival-mastercard-visa-chainalysis",
+    "card_name": "Theblock Card",
+    "card_type": "Unknown",
+    "company_name": "Theblock",
+    "company_website": "https://www.theblock.co",
+    "notes": "Stablecoins volumes could rival Visa and Mastercard, processing up to $1.5 quadrillion annually by 2035 per a new Chainalysis report. | Could not fetch website",
+    "date_found": "2026-04-13"
+  },
+  {
+    "source_platform": "Web (https://ventureburn.com \u203a News \u203a Cryptocurrency)",
+    "source_url": "https://ventureburn.com/best-crypto-card/",
+    "card_name": "Ventureburn Card",
+    "card_type": "Debit/Credit",
+    "company_name": "Ventureburn",
+    "company_website": "https://ventureburn.com",
+    "notes": "The Coinbase Card is a Visa crypto debit card that allows users to spend crypto directly from their Coinbase balance while earning cashback in ...",
+    "date_found": "2026-04-13"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/il/app/oppi-bitcoin-crypto-wallet/id6502544148",
+    "card_name": "\u00e2\u0080\u008eOppi: Bitcoin &amp; Crypto Wallet App",
+    "card_type": "Virtual",
+    "company_name": "",
+    "company_website": "https://apps.apple.com",
+    "notes": "Get a free virtual crypto card backed by Mastercard, an optional physical crypto card backed by Visa, and spend your crypto at 150M+ merchants ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://apps.apple.com/us/iphone/story/id1827352615",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-04-13"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=com.ownrwallet.wallet&hl=uk",
+    "card_name": "OWNR Crypto wallet &amp; Visa Card \u2013 \u0414\u043e\u0434\u0430\u0442\u043a\u0438 \u0432 Google Play",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://play.google.com",
+    "notes": "... no KYC verification, instant email delivery. More info at giftcards.ownrwallet.com. Manage all crypto and Visa card in a single app, swiftly and simply. Top ...",
+    "play_store_link": "https://play.google.com/store/apps/details?id\\u003dcom.devsisters.cos\\u0026rdid\\u003dcom.devsisters.cos\\u0026feature\\u003dmd\\u0026offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "date_found": "2026-04-13"
+  },
+  {
+    "source_platform": "Web (https://guardarian.com \u203a buy-now-without-verification)",
+    "source_url": "https://guardarian.com/buy-now-without-verification",
+    "card_name": "Guardarian Card",
+    "card_type": "Unknown",
+    "company_name": "Guardarian",
+    "company_website": "https://guardarian.com",
+    "notes": "Instantly sell NOW to fiat via bank transfer or direct payout to Visa and MasterCard with no KYC. ... Please examine the terms and conditions of the service and ...",
+    "terms_conditions_url": "https://guardarian.com/terms-of-service",
+    "privacy_policy_url": "https://guardarian.com/privacy-policy",
+    "date_found": "2026-04-13"
+  }
+]
