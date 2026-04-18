@@ -1,0 +1,60 @@
+[
+  {
+    "source_platform": "Web (https://prepaidify.com \u203a Virtual Cards)",
+    "source_url": "https://prepaidify.com/buy-visa-gift-card-with-bitcoin?srsltid=AfmBOooE4Kf0PD86LffFs7KQCHX9M0a6DxoW2mvyKBn2iMXNltEUg471",
+    "card_name": "Prepaidify Card",
+    "card_type": "Unknown",
+    "company_name": "Prepaidify",
+    "company_website": "https://prepaidify.com",
+    "notes": "A Special Card Made For Crypto Users \u00b7 High Limit: 2,000 USD/Month. \u00b7 Top-Up With Over 10 Cryptos. \u00b7 No KYC Verification \u00b7 Multiple Bin Support \u00b7 1.5% Topup Fee ... | Could not fetch website",
+    "date_found": "2026-04-18"
+  },
+  {
+    "source_platform": "Web (https://www.nium.com \u203a Products)",
+    "source_url": "https://www.nium.com/products/stablecoin-backed-cards",
+    "card_name": "Nium Card",
+    "card_type": "Prepaid and Virtual",
+    "company_name": "Nium Pte. Ltd.",
+    "company_website": "https://www.nium.com",
+    "notes": "Issue stablecoin-backed cards globally through a single API. Nium supports Visa and Mastercard issuance across 190+ countries \u2014 no new ...",
+    "terms_conditions_url": "https://www.nium.com/legal",
+    "privacy_policy_url": "https://www.nium.com/privacy/privacy-policy",
+    "date_found": "2026-04-18"
+  },
+  {
+    "source_platform": "Web (https://switchere.com)",
+    "source_url": "https://switchere.com/",
+    "card_name": "SH EUROPE UAB Card",
+    "card_type": "Prepaid/Debit/Credit",
+    "company_name": "SH EUROPE UAB",
+    "company_website": "https://switchere.com",
+    "notes": "Use EU-authorized and trusted online crypto exchange services powered by Switchere to buy crypto with a credit card, debit card, or prepaid card (VISA, ...",
+    "terms_conditions_url": "https://switchere.com/terms-of-use",
+    "privacy_policy_url": "https://switchere.com/privacy-policy",
+    "physical_address": "LVIVO G. 25-701, VILNIUS, LITHUANIA",
+    "date_found": "2026-04-18"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/ng/app/oppi-bitcoin-crypto-wallet/id6502544148",
+    "card_name": "\u00e2\u0080\u008eOppi: Bitcoin &amp; Crypto Wallet App",
+    "card_type": "Virtual",
+    "company_name": "Developer Response",
+    "company_website": "https://apps.apple.com",
+    "notes": "Get a free virtual crypto card backed by Mastercard, an optional physical crypto card backed by Visa, and spend your crypto at 150M+ merchants worldwide with no ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-04-18"
+  },
+  {
+    "source_platform": "Web (https://www.cardplayer.com \u203a betting \u203a no-kyc-sports-b...)",
+    "source_url": "https://www.cardplayer.com/betting/no-kyc-sports-betting-sites",
+    "card_name": "Cardplayer Card",
+    "card_type": "Unknown",
+    "company_name": "Cardplayer",
+    "company_website": "https://www.cardplayer.com",
+    "notes": "No verification for sign up & crypto purchases. Why BC.Game is a Top ... If you're using a bank card, Visa and Mastercard are generally accepted ... | Could not fetch website",
+    "date_found": "2026-04-18"
+  }
+]
