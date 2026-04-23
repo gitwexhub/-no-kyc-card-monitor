@@ -1,0 +1,39 @@
+[
+  {
+    "source_platform": "Web (https://majority.com \u203a visa-debit-card \u203a no-ssn)",
+    "source_url": "https://majority.com/en/us/visa-debit-card/no-ssn?srsltid=AfmBOopy2VilGaXxgDRHBX0uc8emsRWScylC0m375dzy7ikIElA4uWt1",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Get a free MAJORITY Visa Debit Card whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more. | Could not fetch website",
+    "date_found": "2026-04-23"
+  },
+  {
+    "source_platform": "Web (https://vizocard.com \u203a blog \u203a virtual-card-no-kyc)",
+    "source_url": "https://vizocard.com/blog/virtual-card-no-kyc",
+    "card_name": "Vizocard",
+    "card_type": "Virtual",
+    "company_name": "Vizocard",
+    "company_website": "https://vizocard.com",
+    "notes": "Get your card in seconds and start paying online right away. ... Get your card now and start spending in minutes. ... Our virtual visa card no kyc and virtual ...",
+    "terms_conditions_url": "https://vizocard.com/policy/terms-of-service",
+    "privacy_policy_url": "https://vizocard.com/policy/privacy-policy",
+    "contact_email": "support@vizocard.com",
+    "physical_address": "21 St Petersburgh Pl, London W2 4LA, UK",
+    "phone_number": "+447426498980",
+    "date_found": "2026-04-23"
+  },
+  {
+    "source_platform": "Web (https://gist.github.com \u203a zzjpbo7)",
+    "source_url": "https://gist.github.com/zzjpbo7/c15682d74eed64c1f96aec402770ce0e",
+    "card_name": "Gist Card",
+    "card_type": "Virtual",
+    "company_name": "Gist",
+    "company_website": "https://gist.github.com",
+    "notes": "No passport scans, no lengthy verification processes\u2014just a straightforward way to get yourself a virtual Visa ... That's roughly 5 dollars to get your card up ...",
+    "terms_conditions_url": "https://docs.github.com/site-policy/github-terms/github-terms-of-service",
+    "privacy_policy_url": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
+    "date_found": "2026-04-23"
+  }
+]
