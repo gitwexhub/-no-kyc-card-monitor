@@ -1,0 +1,41 @@
+[
+  {
+    "source_platform": "YouTube",
+    "source_url": "https://www.youtube.com/watch?v=WDt2pULMurM",
+    "card_name": "Google LLC Card",
+    "card_type": "Unknown",
+    "company_name": "Google LLC",
+    "company_website": "https://www.youtube.com",
+    "notes": "I'm going to be sharing with you what I consider the best decentralized Visa crypto card so that means that they are not going to ask you for KYC.",
+    "terms_conditions_url": "https://www.youtube.com/t/terms",
+    "privacy_policy_url": "https://www.youtube.com/t/privacy",
+    "parent_company": "Alphabet Inc.",
+    "physical_address": "901 Cherry Ave. San Bruno, CA 94066 USA",
+    "date_found": "2026-05-16"
+  },
+  {
+    "source_platform": "Web (https://paymentsindustryintelligence.com \u203a visa-turns-th...)",
+    "source_url": "https://paymentsindustryintelligence.com/visa-turns-the-card-into-an-identity-credential/",
+    "card_name": "Payments Industry Intelligence Card",
+    "card_type": "Unknown",
+    "company_name": "Payments Industry Intelligence",
+    "company_website": "https://paymentsindustryintelligence.com",
+    "notes": "Discover how Visa turns the card into an identity credential for mobile banking with innovative tap-based authentication technology.",
+    "terms_conditions_url": "https://paymentsindustryintelligence.com/terms-of-business/",
+    "privacy_policy_url": "https://paymentsindustryintelligence.com/privacy-policy-gdpr/",
+    "contact_email": "info@paymentsii.com",
+    "physical_address": "Langley House, 53 Theobald St., Borehamwood WD6 4RT",
+    "date_found": "2026-05-16"
+  },
+  {
+    "source_platform": "Web (https://bfree.cards \u203a no-kyc-crypto-card-vs-verified-whi...)",
+    "source_url": "https://bfree.cards/no-kyc-crypto-card-vs-verified-which-is-better/",
+    "card_name": "Bfree Cards",
+    "card_type": "Virtual",
+    "company_name": "Bfree",
+    "company_website": "https://bfree.cards",
+    "notes": "You can make your free virtual Visa card right away with Bfree's no-KYC crypto card. ... Terms and Conditions. Privacy Policy. Member. Sign up.",
+    "contact_email": "admin@bfree.cards",
+    "date_found": "2026-05-16"
+  }
+]
