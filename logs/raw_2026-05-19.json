@@ -1,0 +1,35 @@
+[
+  {
+    "source_platform": "Reddit r/privacyguides",
+    "source_url": "https://www.reddit.com/r/PrivacyGuides/comments/wss9fc/anonymous_visa_or_mastercard_debit_card/",
+    "card_name": "",
+    "card_type": "Debit",
+    "company_name": "",
+    "company_website": "",
+    "notes": "Basically a Visa or Mastercard debit card that doesn't require KYC or any identifying info about you. Preferably a physical card (not just ... | No website found",
+    "date_found": "2026-05-19"
+  },
+  {
+    "source_platform": "Web (https://technewstt.com \u203a visa-introduces-card-based-ident...)",
+    "source_url": "https://technewstt.com/visa-introduces-card-based-identity-verification/",
+    "card_name": "Technewstt Card",
+    "card_type": "Unknown",
+    "company_name": "Technewstt",
+    "company_website": "https://technewstt.com",
+    "notes": "Identity is the key to safe commerce. Your Visa card is now the key to secure online identity verification. | Could not fetch website",
+    "date_found": "2026-05-19"
+  },
+  {
+    "source_platform": "Web (https://crypto.com \u203a cards)",
+    "source_url": "https://crypto.com/us/cards",
+    "card_name": "Crypto.com Visa Signature Credit Card",
+    "card_type": "Credit",
+    "company_name": "Crypto.com",
+    "company_website": "https://crypto.com",
+    "notes": "Enjoy all the Visa Signature benefits, including travel perks, purchase protections, and 24/7 concierge services.",
+    "terms_conditions_url": "https://crypto.com/document/legal_us.pdf",
+    "privacy_policy_url": "https://crypto.com/privacy/en/usa",
+    "ceo_or_founders": "Kris Marszalek (Co-Founder & CEO); Rafael Melo (Co-Founder & CFO); Bobby Bao (Co-Founder, Head of Crypto.com Capital); Eric Anziani (President & COO)",
+    "date_found": "2026-05-19"
+  }
+]
