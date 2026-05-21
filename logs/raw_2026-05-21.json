@@ -1,0 +1,71 @@
+[
+  {
+    "source_platform": "YouTube",
+    "source_url": "https://www.youtube.com/watch?v=unXZvZ0w0_s",
+    "card_name": "Google LLC Card",
+    "card_type": "Prepaid/Debit",
+    "company_name": "Google LLC",
+    "company_website": "https://www.youtube.com",
+    "notes": "This Crypto Debit Card Is Better Than Any No KYC Card (Here's why) ... How to buy Prepaid Visa Debit Cards with Bitcoin. theBTCcourse\u202251K ...",
+    "terms_conditions_url": "https://www.youtube.com/t/terms",
+    "privacy_policy_url": "https://www.youtube.com/t/privacy",
+    "parent_company": "Alphabet Inc.",
+    "physical_address": "901 Cherry Ave. San Bruno, CA 94066 USA",
+    "phone_number": "+1 650-253-0001",
+    "date_found": "2026-05-21"
+  },
+  {
+    "source_platform": "Web (https://crypto.com \u203a cards)",
+    "source_url": "https://crypto.com/en/cards",
+    "card_name": "Visa Signature\u00ae Credit Card",
+    "card_type": "Credit",
+    "company_name": "Crypto.com",
+    "company_website": "https://crypto.com",
+    "notes": "Get up to 5% back in crypto with Crypto.com Visa Card. Enjoy zero foreign exchange fees. Apply for your Crypto.com Visa card now.",
+    "terms_conditions_url": "https://crypto.com/document/legal_us.pdf",
+    "privacy_policy_url": "https://crypto.com/privacy/en/usa",
+    "ceo_or_founders": "Kris Marszalek (Co-Founder & CEO); Rafael Melo (Co-Founder & CFO); Bobby Bao (Co-Founder, Head of Crypto.com Capital); Eric Anziani (President & COO)",
+    "date_found": "2026-05-21"
+  },
+  {
+    "source_platform": "Web (https://www.wirexapp.com \u203a stablecoin-and-crypto-card)",
+    "source_url": "https://www.wirexapp.com/stablecoin-and-crypto-card",
+    "card_name": "Wirex Card",
+    "card_type": "Debit",
+    "company_name": "Wirex",
+    "company_website": "https://www.wirexapp.com",
+    "notes": "It's a debit card that connects your crypto and fiat \u2014 spend anywhere Visa is accepted, instantly converting at real rates. How do I get my card?",
+    "app_store_link": "https://itunes.apple.com/us/app/wirex-btc-debit-card-bitcoin-wallet/id1090004654",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.wirex",
+    "terms_conditions_url": "https://www.wirexapp.com/legal/wirex-business-general-terms-of-service",
+    "issuing_bank": "Wirex Limited",
+    "contact_email": "press@wirexapp.com; partners@wirexapp.com; marketing@wirexapp.com; affiliates@wirexapp.com; supportescalations@wirexapp.com",
+    "physical_address": "9th Floor 107 Cheapside, London, United Kingdom, EC2V 6DN",
+    "date_found": "2026-05-21"
+  },
+  {
+    "source_platform": "Web (https://www.coinspeaker.com \u203a zelf-visa-anonymous-card)",
+    "source_url": "https://www.coinspeaker.com/zelf-visa-anonymous-card/",
+    "card_name": "Coinspeaker Card",
+    "card_type": "Debit",
+    "company_name": "Coinspeaker",
+    "company_website": "https://www.coinspeaker.com",
+    "notes": "Bank of the Metaverse, ZELF, has announced its new anonymous Visa debit card that can be funded with cryptocurrency.",
+    "terms_conditions_url": "https://www.coinspeaker.com/terms-and-conditions/",
+    "privacy_policy_url": "https://www.coinspeaker.com/privacy-policy/",
+    "date_found": "2026-05-21"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=com.ownrwallet.wallet&hl=en_AU",
+    "card_name": "OWNR Digital Wallet",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://play.google.com",
+    "notes": "Manage all crypto and Visa card in a single app, swiftly and simply. Top up ... - No KYC and no registration to use crypto \u2013 we value your privacy and time",
+    "play_store_link": "https://play.google.com/store/apps/details?id\\u003dcom.supercell.clashroyale\\u0026rdid\\u003dcom.supercell.clashroyale\\u0026feature\\u003dmd\\u0026offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "date_found": "2026-05-21"
+  }
+]
