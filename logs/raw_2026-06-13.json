@@ -1,0 +1,59 @@
+[
+  {
+    "source_platform": "Web (https://fyatu.com)",
+    "source_url": "https://fyatu.com/",
+    "card_name": "Fyatu Card",
+    "card_type": "Prepaid, Debit, Credit, and Virtual",
+    "company_name": "Fyatu Financial Technologies Limited",
+    "company_website": "https://fyatu.com",
+    "notes": "Is there an instant virtual debit card with no verification? A lightweight identity check is required to issue a card under Visa and Mastercard network rules.",
+    "app_store_link": "https://apps.apple.com/us/app/fyatu-virtual-debit-cards/id6760589880",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.mercipro.fyatu",
+    "terms_conditions_url": "https://fyatu.com/terms/",
+    "privacy_policy_url": "https://fyatu.com/privacy/",
+    "issuing_bank": "Sutton Bank and The Bancorp Bank",
+    "contact_email": "support@fyatu.com",
+    "physical_address": "Dar es Salaam, Tanzania",
+    "date_found": "2026-06-13"
+  },
+  {
+    "source_platform": "Web (https://www.crossmint.com \u203a learn \u203a are-stablecoins-rep...)",
+    "source_url": "https://www.crossmint.com/learn/are-stablecoins-replacing-visa-and-mastercard",
+    "card_name": "Agentic Cards",
+    "card_type": "Virtual",
+    "company_name": "Crossmint, Inc.",
+    "company_website": "https://www.crossmint.com",
+    "notes": "Why stablecoins are replacing ACH and SWIFT, not Visa and Mastercard. A breakdown of the payments stack, cost savings, and how card networks ...",
+    "terms_conditions_url": "https://www.crossmint.com/legal/privacy-policy",
+    "privacy_policy_url": "https://www.crossmint.com/legal/privacy-policy",
+    "physical_address": "1317 Edgewater Dr #4296, Orlando, FL 32804",
+    "date_found": "2026-06-13"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/py/app/huru-zero-balance-uae-account/id6480036658?l=en-GB&platform=watch",
+    "card_name": "\u00e2\u0080\u008eHuru: Zero Balance UAE Account App",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://apps.apple.com",
+    "notes": "... No minimum balance required Your Free Huru Digital Visa Card Get your digital Visa card instantly \u2014 ready for online shopping and app payments Prefer a physical ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-06-13"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=com.oobit",
+    "card_name": "Oobit \u2013 Crypto Card",
+    "card_type": "Virtual",
+    "company_name": "Google LLC",
+    "company_website": "https://play.google.com",
+    "notes": "Finally a crypto card app that works flawlessly locally. The virtual Visa card activation is 100% free and took minutes to set up.",
+    "play_store_link": "https://play.google.com/store/apps/details?id\\u003dcom.miHoYo.GenshinImpact\\u0026rdid\\u003dcom.miHoYo.GenshinImpact\\u0026feature\\u003dmd\\u0026offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "physical_address": "1600 Amphitheatre Parkway, Mountain View, California 94043 USA",
+    "date_found": "2026-06-13"
+  }
+]
