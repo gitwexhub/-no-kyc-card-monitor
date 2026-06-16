@@ -1,0 +1,22 @@
+[
+  {
+    "source_platform": "Web (https://www.visa.com \u203a En us \u203a Solutions)",
+    "source_url": "https://www.visa.com/en-us/solutions/stablecoins",
+    "card_name": "Visa Card",
+    "card_type": "Unknown",
+    "company_name": "Visa",
+    "company_website": "https://www.visa.com",
+    "notes": "Stablecoin\u2010linked cards connect crypto and stablecoin wallets to the global Visa network, allowing users to spend digital assets at millions of ...",
+    "date_found": "2026-06-16"
+  },
+  {
+    "source_platform": "Web (https://corporate.visa.com \u203a sites \u203a innovation \u203a visas-ro...)",
+    "source_url": "https://corporate.visa.com/en/sites/visa-perspectives/innovation/visas-role-in-stablecoins.html",
+    "card_name": "Corporate Card",
+    "card_type": "Unknown",
+    "company_name": "Corporate",
+    "company_website": "https://corporate.visa.com",
+    "notes": "Creating on and off ramps for cards: The Visa ecosystem already supports crypto and stablecoins through stablecoin-linked cards that allow ...",
+    "date_found": "2026-06-16"
+  }
+]
