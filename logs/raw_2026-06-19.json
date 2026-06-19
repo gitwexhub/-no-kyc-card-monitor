@@ -1,0 +1,49 @@
+[
+  {
+    "source_platform": "YouTube",
+    "source_url": "https://www.youtube.com/watch?v=YIxZt2QwwlY",
+    "card_name": "Youtube Card",
+    "card_type": "Debit",
+    "company_name": "Youtube",
+    "company_website": "https://www.youtube.com",
+    "notes": "... Visa or Mastercard, making it a \"best crypto card\" option for many ... This Crypto Debit Card Is Better Than Any No KYC Card (Here's why).",
+    "terms_conditions_url": "https://www.youtube.com/t/terms",
+    "privacy_policy_url": "https://www.youtube.com/t/privacy",
+    "date_found": "2026-06-19"
+  },
+  {
+    "source_platform": "Medium",
+    "source_url": "https://medium.com/coinmonks/i-tested-every-way-to-buy-crypto-online-with-a-credit-card-in-2026-8a31adf65308",
+    "card_name": "",
+    "card_type": "Credit",
+    "company_name": "",
+    "company_website": "",
+    "notes": "No email verification. No phone number. No passport upload. No selfie. I entered my Visa card details, specified the amount, selected USDT ... | No website found",
+    "date_found": "2026-06-19"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/ru/app/ownr-digital-wallet/id1459364947?l=uk&platform=ipad",
+    "card_name": "\u00e2\u0080\u008e\u00d0\u009f\u00d1\u0080\u00d0\u00be\u00d0\u00b3\u00d1\u0080\u00d0\u00b0\u00d0\u00bc\u00d0\u00b0 OWNR Digital Wallet \u00e2\u0080\u0093 App\u00c2\u00a0Store",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://apps.apple.com",
+    "notes": "... no KYC verification, instant email delivery. More info at giftcards.ownrwallet.com. Manage all crypto and Visa card in a single app, swiftly and simply. Top ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-06-19"
+  },
+  {
+    "source_platform": "Web (https://guardarian.com \u203a buy-ada-without-verification)",
+    "source_url": "https://guardarian.com/buy-ada-without-verification",
+    "card_name": "Guardarian Card",
+    "card_type": "Unknown",
+    "company_name": "Guardarian",
+    "company_website": "https://guardarian.com",
+    "notes": "Instantly sell ADA to fiat via bank transfer or direct payout to Visa and MasterCard with no KYC. ... Please examine the terms and conditions of the service and ...",
+    "terms_conditions_url": "https://guardarian.com/terms-of-service",
+    "privacy_policy_url": "https://guardarian.com/privacy-policy",
+    "date_found": "2026-06-19"
+  }
+]
