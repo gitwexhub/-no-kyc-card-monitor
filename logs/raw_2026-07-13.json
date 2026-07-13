@@ -1,0 +1,68 @@
+[
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog \u203a crypto-prepaid-cards)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AfmBOoq0NWLnWPHOBoXiWr2NYSJG5VUBnzTMv_kSeNILO6Wr1omHNtMU",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Buy prepaid Visa and Mastercard cards with Bitcoin, USDT and 300+ tokens. No KYC, instant delivery, spend crypto anywhere cards are accepted.",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-07-13"
+  },
+  {
+    "source_platform": "Web (https://majority.com \u203a Home \u203a Visa Debit Card)",
+    "source_url": "https://majority.com/en/us/visa-debit-card/no-ssn?srsltid=AfmBOornLlB7VLTYBECOGTAV-YYCsxn_misI-RnmIYp9zLKYhaWfAkSr",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Get a free MAJORITY Visa\u00ae Debit Card whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more.",
+    "terms_conditions_url": "https://majority.com/en/terms-of-use",
+    "date_found": "2026-07-13"
+  },
+  {
+    "source_platform": "Web (100+ reactions \u00b7 1 month ago)",
+    "source_url": "https://www.facebook.com/CNC3Television/posts/visa-has-introduced-a-new-identity-verification-system-following-first-ever-depl/1452597286895575/",
+    "card_name": "Facebook Card",
+    "card_type": "Unknown",
+    "company_name": "Facebook",
+    "company_website": "https://www.facebook.com",
+    "notes": "Visa has introduced a new identity verification system. Mastercard Identity Check, enables individuals to use biometric identifiers, such as ... | Could not fetch website",
+    "date_found": "2026-07-13"
+  },
+  {
+    "source_platform": "Reddit r/bitcoin",
+    "source_url": "https://www.reddit.com/r/Bitcoin/comments/1ri4454/whats_the_easiest_way_to_buy_crypto_with_a_credit/",
+    "card_name": "",
+    "card_type": "Credit",
+    "company_name": "",
+    "company_website": "",
+    "notes": "non-custodial cards like EtherFi's Cash Card or Crypto.com require KYC but let you spend at any Visa merchant without triggering a taxable sale ... | No website found",
+    "date_found": "2026-07-13"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/kw/app/ownr-digital-wallet/id1459364947",
+    "card_name": "\u00e2\u0080\u008eOWNR Digital Wallet App",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://apps.apple.com",
+    "notes": "service is fast and secure payment process, no KYC verification, instant email delivery. Manage all crypto and Visa card in a single app, swiftly and simply. ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-07-13"
+  },
+  {
+    "source_platform": "Web (https://topgold.forum \u203a ... \u203a Ad Cards Providers)",
+    "source_url": "https://topgold.forum/topic/409065-walletium-%E2%80%94-no-kyc-virtual-visa-card-%C2%B7-applegoogle-pay-%C2%B7-crypto-funded/",
+    "card_name": "Topgold Card",
+    "card_type": "Virtual",
+    "company_name": "Topgold",
+    "company_website": "https://topgold.forum",
+    "notes": "Walletium \u2014 Virtual VISA Card No-KYC virtual VISA card, crypto-funded, designed for everyday spending ... The card is issued by JPMorgan Chase ... | Could not fetch website",
+    "date_found": "2026-07-13"
+  }
+]
