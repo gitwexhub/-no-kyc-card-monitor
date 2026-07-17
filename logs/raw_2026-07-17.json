@@ -1,0 +1,49 @@
+[
+  {
+    "source_platform": "Web (https://majority.com \u203a Home \u203a Visa Debit Card)",
+    "source_url": "https://majority.com/en/us/visa-debit-card/no-ssn?srsltid=AfmBOoos8Xky3LgBC9QAZB7cZTbFxEIfta97Dvyw1NyC8KQy6_2bJgwg",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Get a free MAJORITY Visa\u00ae Debit Card whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more.",
+    "terms_conditions_url": "https://majority.com/en/terms-of-use",
+    "date_found": "2026-07-17"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/kz/app/ownr-digital-wallet/id1459364947",
+    "card_name": "\u00e2\u0080\u008eOWNR Digital Wallet App",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://apps.apple.com",
+    "notes": "no KYC verification, instant email delivery. Manage all crypto and Visa card in a single app, swiftly and simply. Visa, Mastercard and UnionPay are accepted.",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-07-17"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/us/app/ether-fi-crypto-card-spend/id6670338367",
+    "card_name": "\u00e2\u0080\u008eether.fi: Crypto Card &amp; Spend App",
+    "card_type": "Credit",
+    "company_name": "Developer Response",
+    "company_website": "https://apps.apple.com",
+    "notes": "A smarter credit card that puts you in control. Skip the bank fees and spend your money anywhere cards are accepted. works exactly like a visa, KYC ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-07-17"
+  },
+  {
+    "source_platform": "Reddit r/crypto_com",
+    "source_url": "https://www.reddit.com/r/Crypto_com/comments/x6j973/visa_card_changes_to_terms_and_conditions/",
+    "card_name": "",
+    "card_type": "Debit",
+    "company_name": "",
+    "company_website": "",
+    "notes": "Visa card - Changes to terms and conditions. Crypto.com Visa Card ... If you are looking for a No-KYC Crypto Debit Card \u00b7 r/BitcoinIndia ... | No website found",
+    "date_found": "2026-07-17"
+  }
+]
