@@ -1,0 +1,63 @@
+[
+  {
+    "source_platform": "Web (https://www.justanswer.com \u203a computer \u203a 8zmt3-does-...)",
+    "source_url": "https://www.justanswer.com/computer/8zmt3-does-visa-account-not-valid-when-know-is.html",
+    "card_name": "Justanswer Card",
+    "card_type": "Unknown",
+    "company_name": "Justanswer",
+    "company_website": "https://www.justanswer.com",
+    "notes": "When a Visa card shows as invalid during purchase, first verify the card number, expiration date, and CVV. Ensure billing address matches the bank records. | Could not fetch website",
+    "date_found": "2026-07-18"
+  },
+  {
+    "source_platform": "Web (https://satoshifire.com \u203a Virtual Cards)",
+    "source_url": "https://satoshifire.com/virtual-card-no-verification",
+    "card_name": "Satoshifire Card",
+    "card_type": "Prepaid/Credit/Virtual",
+    "company_name": "Satoshifire",
+    "company_website": "https://satoshifire.com",
+    "notes": "Ezzocard virtual prepaid card is possibly the best known option for a virtual card without KYC today. It is available for Visa or MasterCard.",
+    "terms_conditions_url": "https://satoshifire.com/",
+    "privacy_policy_url": "https://satoshifire.com/privacy-policy",
+    "date_found": "2026-07-18"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/jm/app/ownr-digital-wallet/id1459364947",
+    "card_name": "\u00e2\u0080\u008eOWNR Digital Wallet App",
+    "card_type": "Unknown",
+    "company_name": "Developer Response",
+    "company_website": "https://apps.apple.com",
+    "notes": "no KYC verification, instant email delivery. Manage all crypto and Visa card in a single app, swiftly and simply. Visa, Mastercard and UnionPay are accepted.",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-07-18"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/us/app/paysera-super-app/id737308884?l=pt-BR&platform=watch",
+    "card_name": "\u00e2\u0080\u008eApp\u00c2\u00a0Paysera Super App \u00e2\u0080\u0093 App\u00c2\u00a0Store",
+    "card_type": "Unknown",
+    "company_name": "Resposta do desenvolvedor",
+    "company_website": "https://apps.apple.com",
+    "notes": "Order contactless Visa cards via the app. Clients are identified following the latest AML and KYC standards \u2022 Cards equipped with 3D-Secure technology \u2022 Freeze ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-07-18"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=co.aixpay&hl=en_AU",
+    "card_name": "AIX Pay: Crypto Card &amp; Wallet",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://play.google.com",
+    "notes": "AIX Pay turns USDT, USDC, and other stablecoins into everyday spending with a Visa card you can use at 175M+ merchants and ATMs. No bank account ...",
+    "play_store_link": "https://play.google.com/store/apps/details?id\\u003dcom.xseed.moonlightpeaks\\u0026rdid\\u003dcom.xseed.moonlightpeaks\\u0026feature\\u003dmd\\u0026offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "date_found": "2026-07-18"
+  }
+]
