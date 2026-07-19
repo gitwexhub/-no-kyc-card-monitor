@@ -1,0 +1,71 @@
+[
+  {
+    "source_platform": "Web (https://www.visa.com \u203a En us \u203a Personal)",
+    "source_url": "https://www.visa.com/en-us/personal/security",
+    "card_name": "Visa Card",
+    "card_type": "Credit",
+    "company_name": "Visa",
+    "company_website": "https://www.visa.com",
+    "notes": "To keep you 100 percent confident in transactions involving Visa, Visa has developed multiple layers of fraud prevention and detection systems and programs.",
+    "date_found": "2026-07-19"
+  },
+  {
+    "source_platform": "Web (3 answers \u00b7 4 years ago)",
+    "source_url": "https://www.quora.com/What-credit-card-wont-ask-for-an-ID-to-apply-online",
+    "card_name": "Quora Card",
+    "card_type": "Credit",
+    "company_name": "Quora",
+    "company_website": "https://www.quora.com",
+    "notes": "If you want a card without having to provide ID, by a gift Visa card at a store and load money on it. No credit card company will issue a real ... | Could not fetch website",
+    "date_found": "2026-07-19"
+  },
+  {
+    "source_platform": "Web (2 answers \u00b7 10 years ago)",
+    "source_url": "https://www.quora.com/My-visa-debit-card-its-a-chip-and-pin-doesnt-require-pin-verification-while-purchasing-goods-online-Why",
+    "card_name": "Quora Card",
+    "card_type": "Debit",
+    "company_name": "Quora",
+    "company_website": "https://www.quora.com",
+    "notes": "My visa debit card (its a chip and pin) doesn't require pin verification while purchasing goods online. Why? | Could not fetch website",
+    "date_found": "2026-07-19"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/ng/app/sana-onchain-money-app/id6752685081",
+    "card_name": "\u00e2\u0080\u008eSana: Onchain Money App App",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://apps.apple.com",
+    "notes": "Get Visa Signature Card and Spend Stablecoin Like Cash Globally Self-custody Neobank 2.0 on Solana For Global Onchain Money App for Everyone - Send and ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-07-19"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/cn/app/nbank/id652700251",
+    "card_name": "\u00e2\u0080\u008enBank App",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://apps.apple.com",
+    "notes": "Digital KYC Complete your KYC online. No Branch visits required. Fill up ... Visa Cards by selecting nRemit. All you need to do is fill up a form with ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-07-19"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=co.aixpay",
+    "card_name": "AIX Pay: Crypto Card &amp; Wallet",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://play.google.com",
+    "notes": "AIX Pay turns USDT, USDC, and other stablecoins into everyday spending with a Visa card you can use at 175M+ merchants and ATMs. No bank account ...",
+    "play_store_link": "https://play.google.com/store/apps/details?id\\u003dcom.xseed.moonlightpeaks\\u0026rdid\\u003dcom.xseed.moonlightpeaks\\u0026feature\\u003dmd\\u0026offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "date_found": "2026-07-19"
+  }
+]
