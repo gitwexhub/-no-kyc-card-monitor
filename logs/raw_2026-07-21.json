@@ -1,0 +1,36 @@
+[
+  {
+    "source_platform": "Web (https://majority.com \u203a Home \u203a Visa Debit Card)",
+    "source_url": "https://majority.com/en/us/visa-debit-card/no-ssn?srsltid=AfmBOoqQ9nnU7fghEPufG2bpi1QqFFMrfOi8ycZzRtqhIuIyMWYnjYgK",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Visa\u00ae Debit Card without SSN. Get a free MAJORITY Visa Debit Card whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more.",
+    "terms_conditions_url": "https://majority.com/en/terms-of-use",
+    "date_found": "2026-07-21"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/us/app/paysera-super-app/id737308884?l=pt-BR",
+    "card_name": "\u00e2\u0080\u008eApp\u00c2\u00a0Paysera Super App \u00e2\u0080\u0093 App\u00c2\u00a0Store",
+    "card_type": "Unknown",
+    "company_name": "Resposta do desenvolvedor",
+    "company_website": "https://apps.apple.com",
+    "notes": "Order contactless Visa cards via the app. Clients are identified following the latest AML and KYC standards \u2022 Cards equipped with 3D-Secure technology \u2022 Freeze ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-07-21"
+  },
+  {
+    "source_platform": "Web (150+ likes \u00b7 2 years ago)",
+    "source_url": "https://www.instagram.com/reel/C8rmZiesAxu/?hl=en",
+    "card_name": "Instagram Card",
+    "card_type": "Virtual",
+    "company_name": "Instagram",
+    "company_website": "https://www.instagram.com",
+    "notes": "Secure, private and no KYC. OCR. Phesky Create NFC VIRTUAL CARD Pay ... ORDER CARD Choose your card and confirm. 4. START USING Activate ...",
+    "date_found": "2026-07-21"
+  }
+]
