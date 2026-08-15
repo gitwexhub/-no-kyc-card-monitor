@@ -1,0 +1,50 @@
+[
+  {
+    "source_platform": "Web (https://www.spendnode.io \u203a no-kyc)",
+    "source_url": "https://www.spendnode.io/crypto-cards/no-kyc/",
+    "card_name": "Spendnode Card",
+    "card_type": "Virtual",
+    "company_name": "Spendnode",
+    "company_website": "https://www.spendnode.io",
+    "notes": "The best crypto cards for no KYC in August 2026 are KAST K Card, Jupiter Global, COCA Visa Card, MetaMask Virtual Card, and Bleap Mastercard.",
+    "terms_conditions_url": "https://www.spendnode.io/terms/",
+    "privacy_policy_url": "https://www.spendnode.io/privacy/",
+    "date_found": "2026-08-15"
+  },
+  {
+    "source_platform": "X/Twitter",
+    "source_url": "https://x.com/x/article/2087939549838131381",
+    "card_name": "",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "",
+    "notes": "KYC is mandatory. Anyone looking for a no-verification option will need to look elsewhere. Identity checks are part of the design. Availability ... | No website found",
+    "date_found": "2026-08-15"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/us/app/paysera-super-app/id737308884?l=pt-BR&platform=ipad",
+    "card_name": "\u00e2\u0080\u008eApp\u00c2\u00a0Paysera Super App \u00e2\u0080\u0093 App\u00c2\u00a0Store",
+    "card_type": "Unknown",
+    "company_name": "Resposta do desenvolvedor",
+    "company_website": "https://apps.apple.com",
+    "notes": "Order contactless Visa cards via the app. Clients are identified following the latest AML and KYC standards \u2022 Cards equipped with 3D-Secure technology \u2022 Freeze ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-08-15"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/us/app/crypto-com-trade-every-market/id1262148500",
+    "card_name": "\u00e2\u0080\u008eCrypto.com: Trade Every Market App",
+    "card_type": "Credit",
+    "company_name": "Developer Response",
+    "company_website": "https://apps.apple.com",
+    "notes": "... No separate KYC or brokerage paperwork for existing users Level Up ... Crypto.com Visa Signature\u00ae Credit Card Accounts are issued by Comenity ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-08-15"
+  }
+]
