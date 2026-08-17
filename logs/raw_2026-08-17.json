@@ -1,0 +1,67 @@
+[
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog \u203a crypto-prepaid-cards)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AfmBOoq0oMcbUTUMYbyFXR3JcgSbFz6Nk6puuKiYbViXlSyYh0SmRIG9",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid/Virtual",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Buy prepaid cards with crypto. Load a virtual Visa or Mastercard with Bitcoin, USDT and 300+ tokens. Instant delivery, zero fees, no KYC.",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-08-17"
+  },
+  {
+    "source_platform": "Reddit r/bitcoin",
+    "source_url": "https://www.reddit.com/r/Bitcoin/comments/1l6xdnt/buy_crypto_with_cc_without_kyc/",
+    "card_name": "",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "",
+    "notes": "Easiest way to buy BTC with CC - no verification? 1 upvote \u00b7 20 comments. How to buy $20 in bitcoin with my visa card and no ID verification? | No website found",
+    "date_found": "2026-08-17"
+  },
+  {
+    "source_platform": "Web (https://majority.com \u203a Home \u203a Visa Debit Card)",
+    "source_url": "https://majority.com/en/us/visa-debit-card/no-ssn?srsltid=AfmBOoqRcUTAOVBytlLcrKpmu7WRo1roatPYGoGdrNUVnlK52w-iIsPI",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Visa\u00ae Debit Card without SSN. Get a free MAJORITY Visa Debit Card whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more.",
+    "terms_conditions_url": "https://majority.com/en/terms-of-use",
+    "date_found": "2026-08-17"
+  },
+  {
+    "source_platform": "Web (https://www.plasma.org \u203a Home \u203a Topics)",
+    "source_url": "https://www.plasma.org/learn/topics/cards",
+    "card_name": "Plasma Card",
+    "card_type": "Unknown",
+    "company_name": "Plasma",
+    "company_website": "https://www.plasma.org",
+    "notes": "The Plasma One Card is issued by Rain, a Visa Principal Member, pursuant to a license from Visa. The stablecoin assets in your Plasma One account are owned and ...",
+    "terms_conditions_url": "https://www.plasma.org/plasma-one-android-core-promo-terms",
+    "privacy_policy_url": "https://www.plasma.org/privacy-policy",
+    "date_found": "2026-08-17"
+  },
+  {
+    "source_platform": "Web (290+ likes \u00b7 4 months ago)",
+    "source_url": "https://www.instagram.com/reel/DW9-aedCWKf/",
+    "card_name": "Instagram Card",
+    "card_type": "Debit",
+    "company_name": "Instagram",
+    "company_website": "https://www.instagram.com",
+    "notes": "COCA is a self custody crypto card app that pairs a non custodial wallet and Visa debit card with cashback, stablecoin yield, and zero fee cross ...",
+    "date_found": "2026-08-17"
+  },
+  {
+    "source_platform": "Web (7 months ago)",
+    "source_url": "https://www.instagram.com/p/DTkvueHCHnk/",
+    "card_name": "Instagram Card",
+    "card_type": "Virtual",
+    "company_name": "Instagram",
+    "company_website": "https://www.instagram.com",
+    "notes": "... Order Card\" and choose \"Virtual Visa\" (or Plastic if you prefer) ... \ud83d\udee1\ufe0f No KYC. No headaches. Just easy cross-chain swaps while you ...",
+    "date_found": "2026-08-17"
+  }
+]
