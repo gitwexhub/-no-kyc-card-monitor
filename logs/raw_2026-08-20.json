@@ -1,0 +1,50 @@
+[
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog \u203a crypto-prepaid-cards)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AfmBOoq4TwnqIDtAfod3EpoGTbLZD85vunSbnKw1fQFfMLoGH4SHhylW",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid/Virtual",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Buy prepaid cards with crypto. Load a virtual Visa or Mastercard with Bitcoin, USDT and 300+ tokens. Instant delivery, zero fees, no KYC.",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-08-20"
+  },
+  {
+    "source_platform": "Web (https://support.google.com \u203a ...)",
+    "source_url": "https://support.google.com/googleplay/thread/293371187/visa-card-not-able-to-verify-already-made-4-attempts-please-help?hl=en",
+    "card_name": "Support Card",
+    "card_type": "Unknown",
+    "company_name": "Support",
+    "company_website": "https://support.google.com",
+    "notes": "Check that the address listed matches the billing address of your card. If needed, update the address. Your card may have specific restrictions ...",
+    "terms_conditions_url": "https://www.google.com/accounts/TOS",
+    "privacy_policy_url": "https://www.google.com/intl/en/privacy.html",
+    "date_found": "2026-08-20"
+  },
+  {
+    "source_platform": "Web (https://majority.com \u203a no-ssn)",
+    "source_url": "https://majority.com/en/us/visa-debit-card/no-ssn?srsltid=AfmBOoo1OfYffDXT_xWgQjrpJ4XwTWbA1mWL8wh1fZAIeh5QF6h-uhmV",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Visa\u00ae Debit Card without SSN. Get a free MAJORITY Visa Debit Card whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more.",
+    "terms_conditions_url": "https://majority.com/en/terms-of-use",
+    "date_found": "2026-08-20"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=co.mona.android",
+    "card_name": "Crypto.com: Trade Every Market",
+    "card_type": "Credit",
+    "company_name": "",
+    "company_website": "https://play.google.com",
+    "notes": "No separate KYC or brokerage paperwork for existing users. Level Up ... Crypto.com Visa Signature\u00ae Credit Card Accounts are issued by ...",
+    "play_store_link": "https://play.google.com/store/apps/details?id\\u003dcom.Pocketpair.NeverGrave\\u0026rdid\\u003dcom.Pocketpair.NeverGrave\\u0026feature\\u003dmd\\u0026offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "date_found": "2026-08-20"
+  }
+]
