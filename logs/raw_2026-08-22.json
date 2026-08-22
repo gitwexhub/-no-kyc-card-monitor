@@ -1,0 +1,37 @@
+[
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog \u203a crypto-prepaid-cards)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AfmBOoqBF_HKFPrXG8drpgcQNu9CZ-W0l9yFjpRNrfLZqnTs2OcEkxw5",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid/Virtual",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Buy prepaid cards with crypto. Load a virtual Visa or Mastercard with Bitcoin, USDT and 300+ tokens. Instant delivery, zero fees, no KYC.",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-08-22"
+  },
+  {
+    "source_platform": "Web (https://investor.visa.com \u203a news-details)",
+    "source_url": "https://investor.visa.com/news/news-details/2026/Your-Card-Your-Security--Tap-A-Safer-Way-to-Verify-Identity--Visa-Keyno-and-Fidelity-Bank-Bahamas-Lead-the-Transformation/default.aspx",
+    "card_name": "Investor Card",
+    "card_type": "Unknown",
+    "company_name": "Investor",
+    "company_website": "https://investor.visa.com",
+    "notes": "\u201cIdentity is the key to safe commerce. Now, your Visa card is the key to secure online identity verification. Keyno and Visa are leading the ...",
+    "date_found": "2026-08-22"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/in/app/aix-pay-crypto-card-wallet/id6760390460",
+    "card_name": "\u00e2\u0080\u008eAIX Pay: Crypto Card &amp; Wallet App",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://apps.apple.com",
+    "notes": "AIX Pay turns USDT, USDC, and other stablecoins into everyday spending with a Visa card you can use at 175M+ merchants and ATMs. No bank account. ... Our ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://www.apple.com/legal/internet-services/",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-08-22"
+  }
+]
