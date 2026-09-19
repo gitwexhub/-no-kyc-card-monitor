@@ -1,0 +1,40 @@
+[
+  {
+    "source_platform": "Web (https://cardupnow.com \u203a virtual-cards)",
+    "source_url": "https://cardupnow.com/virtual-cards/",
+    "card_name": "Cardupnow Card",
+    "card_type": "Virtual",
+    "company_name": "Cardupnow",
+    "company_website": "https://cardupnow.com",
+    "notes": "With features like no KYC options, instant issuance, and global acceptance ... Yes, using a Virtual Visa Card for free trials is safer than using your main bank ...",
+    "terms_conditions_url": "https://cardupnow.com/terms-and-conditions/",
+    "privacy_policy_url": "https://cardupnow.com/privacy-policy/",
+    "date_found": "2026-09-19"
+  },
+  {
+    "source_platform": "YouTube",
+    "source_url": "https://www.youtube.com/watch?v=w57fJuhkg7w",
+    "card_name": "Youtube Card",
+    "card_type": "Unknown",
+    "company_name": "Youtube",
+    "company_website": "https://www.youtube.com",
+    "notes": "Disagree with stablecoin disruption thesis for Visa and Mastercard, says Mizuho's Dan Dolev. @CNBCtelevision165 likes18K views1 year ago",
+    "terms_conditions_url": "https://www.youtube.com/t/terms",
+    "privacy_policy_url": "https://www.youtube.com/t/privacy",
+    "date_found": "2026-09-19"
+  },
+  {
+    "source_platform": "Web (https://dpt.xyz \u203a Learn)",
+    "source_url": "https://dpt.xyz/learn/crypto-card-kyc/",
+    "card_name": "Dpt Card",
+    "card_type": "Unknown",
+    "company_name": "Dpt",
+    "company_website": "https://dpt.xyz",
+    "notes": "... no KYC at all. The practical implication: if a ... The card is issued by U.S. Bank under licence from Visa; custody is provided by BitGo.",
+    "app_store_link": "https://apps.apple.com/hk/app/dpt-pay-crypto-card-pay/id6754588593",
+    "play_store_link": "https://play.google.com/store/apps/details?id=xyz.dpt.pay",
+    "terms_conditions_url": "https://dpt.xyz/terms-of-service",
+    "privacy_policy_url": "https://dpt.xyz/privacy-policy",
+    "date_found": "2026-09-19"
+  }
+]
