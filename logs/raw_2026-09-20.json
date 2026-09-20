@@ -1,0 +1,99 @@
+[
+  {
+    "source_platform": "YouTube",
+    "source_url": "https://www.youtube.com/watch?v=rxuBQ16ml10&vl=ko",
+    "card_name": "Youtube Card",
+    "card_type": "Debit/Virtual",
+    "company_name": "Youtube",
+    "company_website": "https://www.youtube.com",
+    "notes": "Reloadable Virtual Visa & Mastercard from Fiji| Easy to Buy - No KYC ... DEBIT CARD ALERT \u2014 Your Bank Can't Stop This NEW Scam That Steals ...",
+    "terms_conditions_url": "https://www.youtube.com/t/terms",
+    "privacy_policy_url": "https://www.youtube.com/t/privacy",
+    "date_found": "2026-09-20"
+  },
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AU7gw4XJWhwptHML7fw116uOcG3xZBVZ_sWluR2D2_Mq8Y5e4YNwG34B",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid/Virtual",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Buy prepaid cards with crypto. Load a virtual Visa or Mastercard with Bitcoin, USDT and 300+ tokens. Instant delivery, zero fees, no KYC.",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-09-20"
+  },
+  {
+    "source_platform": "Reddit r/bitcoinbeginners",
+    "source_url": "https://www.reddit.com/r/BitcoinBeginners/comments/ysa1r5/buy_btc_without_kyc/",
+    "card_name": "",
+    "card_type": "Debit/Credit",
+    "company_name": "",
+    "company_website": "",
+    "notes": "Buy BTC without KYC ...I want to buy my BTC with my Visa credit card. Since a debit card is linked to you personal identity (why do you need ... | No website found",
+    "date_found": "2026-09-20"
+  },
+  {
+    "source_platform": "Web (5 comments \u00b7 3 months ago)",
+    "source_url": "https://www.facebook.com/groups/656252579073280/posts/1755905052441355/",
+    "card_name": "Facebook Card",
+    "card_type": "Credit",
+    "company_name": "Facebook",
+    "company_website": "https://www.facebook.com",
+    "notes": "In fact, Mastercard and Visa merchants cannot request ID to accept a \"signed card\" According to Visa: \"Although Visa rules do not prelude ... | Could not fetch website",
+    "date_found": "2026-09-20"
+  },
+  {
+    "source_platform": "Web (https://juztcard.com \u203a Resources \u203a Credit Card Tips)",
+    "source_url": "https://juztcard.com/resources/can-you-get-a-credit-card-without-an-ssn",
+    "card_name": "Juztcard Card",
+    "card_type": "Credit",
+    "company_name": "Juztcard",
+    "company_website": "https://juztcard.com",
+    "notes": "Many credit card issuers accept an ITIN instead of an SSN to comply with identity verification laws. Some also accept passports, visas or employment ...",
+    "app_store_link": "https://apps.apple.com/us/app/juzt-card/id6587575512",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.i2c.mcpcc.juztv32",
+    "terms_conditions_url": "https://juztcard.com/glossary",
+    "privacy_policy_url": "https://juztcard.com/privacy-policy",
+    "date_found": "2026-09-20"
+  },
+  {
+    "source_platform": "Web (https://majority.com \u203a Home \u203a Visa Debit Card)",
+    "source_url": "https://majority.com/en/us/visa-debit-card/no-ssn?srsltid=AU7gw4XEXY_oafJkzLADSCUhbOGRM3BLmMMKVz8v27sN5ePbG-epnbDR",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "You can open an account and get a Visa\u00ae debit card using a passport, matr\u00edcula consular, ITIN, or other government-issued ID \u2014 no SSN required. START YOUR ...",
+    "app_store_link": "https://apps.apple.com/us/app/majority-mobile-banking/id1458589760",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.majority.android",
+    "terms_conditions_url": "https://majority.com/en/terms-of-use",
+    "date_found": "2026-09-20"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=co.aixpay&hl=en_GB",
+    "card_name": "AIX Pay: Crypto Card &amp; Wallet",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://play.google.com",
+    "notes": "AIX Pay turns USDT, USDC, and other stablecoins into everyday spending with a Visa card you can use at 175M+ merchants and ATMs. No bank account ...",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.playdigious.absolum&amp;rdid=com.playdigious.absolum&amp;feature=md&amp;offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "date_found": "2026-09-20"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=com.yunlen.app&hl=en_IE",
+    "card_name": "Yunlen",
+    "card_type": "Virtual",
+    "company_name": "",
+    "company_website": "https://play.google.com",
+    "notes": "Yunlen is a secure fintech app that gives you instant access to US and EU bank accounts, virtual Visa & Mastercard, and a multi-currency wallet ...",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.playdigious.absolum&amp;rdid=com.playdigious.absolum&amp;feature=md&amp;offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "date_found": "2026-09-20"
+  }
+]
