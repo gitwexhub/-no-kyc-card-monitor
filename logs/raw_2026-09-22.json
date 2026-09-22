@@ -1,0 +1,57 @@
+[
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog \u203a crypto-prepaid-cards)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AU7gw4VmY0wXHhrud9EqCgf016G-IpNIHteh1cUeKvYUJeZ_tXxbo-vj",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid/Virtual",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Buy prepaid cards with crypto. Load a virtual Visa or Mastercard with Bitcoin, USDT and 300+ tokens. Instant delivery, zero fees, no KYC.",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-09-22"
+  },
+  {
+    "source_platform": "Web (https://www.visa.com \u203a en-us)",
+    "source_url": "https://www.visa.com/en-us",
+    "card_name": "Visa Card",
+    "card_type": "Unknown",
+    "company_name": "Visa",
+    "company_website": "https://www.visa.com",
+    "notes": "Discover Visa personal payment solutions, secure transactions, travel support, cards and rewards designed to bring more value to your everyday experiences.",
+    "date_found": "2026-09-22"
+  },
+  {
+    "source_platform": "Web (https://usa.visa.com \u203a consumer \u203a travel-support \u203a exch...)",
+    "source_url": "https://usa.visa.com/support/consumer/travel-support/exchange-rate-calculator.html",
+    "card_name": "Usa Card",
+    "card_type": "Unknown",
+    "company_name": "Usa",
+    "company_website": "https://usa.visa.com",
+    "notes": "Use the converter below to get an indication of the rate you may receive when using your Visa card to pay while traveling internationally.",
+    "date_found": "2026-09-22"
+  },
+  {
+    "source_platform": "Web (20+ comments \u00b7 8 years ago)",
+    "source_url": "https://www.facebook.com/groups/nkylife/posts/1800676846617598/",
+    "card_name": "Facebook Card",
+    "card_type": "Unknown",
+    "company_name": "Facebook",
+    "company_website": "https://www.facebook.com",
+    "notes": "Mastercard and Visa merchants cannot request ID to accept a \"signed card\" | Could not fetch website",
+    "date_found": "2026-09-22"
+  },
+  {
+    "source_platform": "Web (https://majority.com \u203a Home \u203a Visa Debit Card)",
+    "source_url": "https://majority.com/en/us/visa-debit-card/no-ssn?srsltid=AU7gw4VWa9Gat8ZAsJ0vUikEvpfdhA3xTX5J1WNHTM5IdaMC8vOjvUai",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Get a MAJORITY Visa\u00ae Debit Card, included with your account, whether or not you have an SSN and save with cashback, discounts, no hidden fees, and more.",
+    "app_store_link": "https://apps.apple.com/us/app/majority-mobile-banking/id1458589760",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.majority.android",
+    "terms_conditions_url": "https://majority.com/en/terms-of-use",
+    "date_found": "2026-09-22"
+  }
+]
