@@ -1,0 +1,60 @@
+[
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog \u203a crypto-prepaid-cards)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AU7gw4UTQppZanrZ5iiaME-g2cS-bMsRMc3ZlwBM1cajxsKamsvd_hSa",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Genghis sells 7 prepaid Visa and Mastercard cards and vouchers, from $5.20, paid with Bitcoin, USDT or 300+ other coins. No KYC at checkout; the card code ...",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-10-14"
+  },
+  {
+    "source_platform": "Web (https://africa.visa.com)",
+    "source_url": "https://africa.visa.com/",
+    "card_name": "Africa Card",
+    "card_type": "Unknown",
+    "company_name": "Africa",
+    "company_website": "https://africa.visa.com",
+    "notes": "Introducing Visa Infinite. Premium cards designed for your extraordinary life. Explore Visa Infinite.",
+    "date_found": "2026-10-14"
+  },
+  {
+    "source_platform": "App Store",
+    "source_url": "https://apps.apple.com/pk/app/6745082515?see-all=reviews&platform=iphone",
+    "card_name": "\u00e2\u0080\u008eRIZON: Stablecoin Finance - Ratings &amp; Reviews",
+    "card_type": "Unknown",
+    "company_name": "Developer Response",
+    "company_website": "https://apps.apple.com",
+    "notes": "This app will first ask you to purchase a paid Visa card and then proceed with KYC. However, when you complete the KYC process, ...",
+    "app_store_link": "https://apps.apple.com/us/iphone/today",
+    "terms_conditions_url": "https://apps.apple.com/us/iphone/story/id1858418879",
+    "privacy_policy_url": "https://www.apple.com/legal/privacy/data/en/app-store/",
+    "date_found": "2026-10-14"
+  },
+  {
+    "source_platform": "Google Play",
+    "source_url": "https://play.google.com/store/apps/details?id=com.tria.v2",
+    "card_name": "Tria: Crypto &amp; Cards",
+    "card_type": "Unknown",
+    "company_name": "",
+    "company_website": "https://play.google.com",
+    "notes": "Tria is a self-custody crypto wallet with a Visa card, trading and earning in one app. Join 600,000+ users across 150+ countries who spend and hold crypto ...",
+    "play_store_link": "https://play.google.com/store/apps/details?id\\u003dcom.mythicowl.truckful\\u0026rdid\\u003dcom.mythicowl.truckful\\u0026feature\\u003dmd\\u0026offerId",
+    "terms_conditions_url": "https://myaccount.google.com/termsofservice",
+    "privacy_policy_url": "https://policies.google.com/privacy",
+    "date_found": "2026-10-14"
+  },
+  {
+    "source_platform": "Web (https://www.thebanker.com \u203a content)",
+    "source_url": "https://www.thebanker.com/content/c6b4c28f-e2fd-42ba-9440-18d6987704d3",
+    "card_name": "Thebanker Card",
+    "card_type": "Unknown",
+    "company_name": "Thebanker",
+    "company_website": "https://www.thebanker.com",
+    "notes": "... issued by Fifth Third Bank\u00a9 Screenshot ... Visa and Mastercard said no-KYC card programmes were inconsistent with their requirements. | Could not fetch website",
+    "date_found": "2026-10-14"
+  }
+]
