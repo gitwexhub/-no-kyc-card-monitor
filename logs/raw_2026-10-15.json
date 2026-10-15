@@ -1,0 +1,48 @@
+[
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog \u203a crypto-prepaid-cards)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AU7gw4VLpgerpjQTk_XQoIX7W79NSD7nQwFPaOD1u8tX2cg0iYg4e7Mx",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Genghis sells 11 prepaid Visa and Mastercard cards and vouchers, from $5.20, paid with Bitcoin, USDT or 300+ other coins. No KYC at checkout; the card code ...",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-10-15"
+  },
+  {
+    "source_platform": "Web (https://changehero.io \u203a All Crypto to Buy)",
+    "source_url": "https://changehero.io/buy/usdt",
+    "card_name": "Changehero Card",
+    "card_type": "Debit/Credit",
+    "company_name": "Changehero",
+    "company_website": "https://changehero.io",
+    "notes": "Buy Tether USD with a Credit Card or Debit Card, PayPal instantly with no ID verification or KYC. Buy Tether USD with VISA, No KYC up to 700\u20ac No ID, Currently, ... | Could not fetch website",
+    "date_found": "2026-10-15"
+  },
+  {
+    "source_platform": "Web (https://getcardn3.com \u203a blog \u203a virtu...)",
+    "source_url": "https://getcardn3.com/blog/virtual-credit-card-belgium",
+    "card_name": "Getcardn3 Card",
+    "card_type": "Credit/Virtual",
+    "company_name": "Getcardn3",
+    "company_website": "https://getcardn3.com",
+    "notes": "At Cardn3, we give you a virtual Visa or Mastercard in seconds - no paperwork, no bank queue, no KYC. ... You get your card details right after ordering. Then you ...",
+    "terms_conditions_url": "https://getcardn3.com/policy/terms-of-service",
+    "privacy_policy_url": "https://getcardn3.com/policy/privacy-policy",
+    "date_found": "2026-10-15"
+  },
+  {
+    "source_platform": "Web (https://www.freedomia.io)",
+    "source_url": "https://www.freedomia.io/",
+    "card_name": "Freedomia Card",
+    "card_type": "Virtual",
+    "company_name": "Freedomia",
+    "company_website": "https://www.freedomia.io",
+    "notes": "Get a virtual Visa card you fund with Bitcoin, USDT, USDC and more. No KYC, Lightning-powered top-ups, spend anywhere Visa is accepted ... Log InGet your card.",
+    "terms_conditions_url": "https://www.freedomia.io/terms",
+    "privacy_policy_url": "https://www.freedomia.io/privacy",
+    "date_found": "2026-10-15"
+  }
+]
