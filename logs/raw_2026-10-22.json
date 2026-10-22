@@ -1,0 +1,50 @@
+[
+  {
+    "source_platform": "Web (https://www.genghis.pro \u203a catalog \u203a crypto-prepaid-cards)",
+    "source_url": "https://www.genghis.pro/catalog/crypto-prepaid-cards?srsltid=AYCX9vI_lGFytXDZLw90dfOEb4YCR6VcU1bdR6Mm5_Gzkm1BBF7-kNNr",
+    "card_name": "Genghis Card",
+    "card_type": "Prepaid",
+    "company_name": "Genghis",
+    "company_website": "https://www.genghis.pro",
+    "notes": "Genghis sells 12 prepaid Visa and Mastercard cards and vouchers, from $5.20, paid with Bitcoin, USDT or 300+ other coins. No KYC at checkout; the card code ...",
+    "terms_conditions_url": "https://www.genghis.pro/terms-conditions",
+    "privacy_policy_url": "https://www.genghis.pro/privacy-policy",
+    "date_found": "2026-10-22"
+  },
+  {
+    "source_platform": "Web (https://support.aven.com \u203a en-us \u203a articles \u203a 453341033...)",
+    "source_url": "https://support.aven.com/hc/en-us/articles/45334103377037-Is-the-Aven-Bitcoin-Visa-Card-a-KYC-free-or-anonymous-card",
+    "card_name": "Support Card",
+    "card_type": "Unknown",
+    "company_name": "Support",
+    "company_website": "https://support.aven.com",
+    "notes": "No - The Aven Bitcoin Visa Card is not a KYC-free or anonymous card.We verify the identity of applicants when they apply for the Aven...",
+    "date_found": "2026-10-22"
+  },
+  {
+    "source_platform": "Web (https://home.kripicard.com \u203a debit-card-no-kyc)",
+    "source_url": "https://home.kripicard.com/debit-card-no-kyc",
+    "card_name": "Home Card",
+    "card_type": "Debit/Credit",
+    "company_name": "Home",
+    "company_website": "https://home.kripicard.com",
+    "notes": "Get a debit card with no KYC on the basic tier. Email-only signup, fund with crypto and spend anywhere Visa works \u2014 no documents, no credit check.",
+    "terms_conditions_url": "https://natlawreview.com/press-releases/kripicard-compliance-team-announces-formal-legal-and-compliance-review-post",
+    "privacy_policy_url": "https://home.kripicard.com/privacy-policy",
+    "date_found": "2026-10-22"
+  },
+  {
+    "source_platform": "Web (https://majority.com \u203a Home \u203a Visa Debit Card)",
+    "source_url": "https://majority.com/en/us/visa-debit-card/no-ssn?srsltid=AYCX9vIrSfeTdn5IHhKDsCgxvOriJTz_gIwYtyLB9eOHtfpdSlpmUcve",
+    "card_name": "Majority Card",
+    "card_type": "Debit",
+    "company_name": "Majority",
+    "company_website": "https://majority.com",
+    "notes": "Get a physical and digital Visa\u00ae debit card, no SSN or ITIN needed. Join MAJORITY online with your passport and start with a 30-day free trial.",
+    "app_store_link": "https://apps.apple.com/us/app/majority-mobile-banking/id1458589760",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.majority.android",
+    "terms_conditions_url": "https://majority.com/en/terms-of-use",
+    "privacy_policy_url": "https://majority.com/en/terms-of-use/privacy-policy",
+    "date_found": "2026-10-22"
+  }
+]
